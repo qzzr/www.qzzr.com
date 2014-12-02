@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+  <meta name="description" content="Qzzr is a simple online quiz tool that allows you to quickly create beautiful quizzes, post them anywhere on the web, view on any device, and easily track results.">
+
+  <meta property="og:title" content="Qzzr, the world's simplest quiz tool" />
+  <meta property="og:url" content="http://qzzr.co" />
+  <meta property="og:description" content="Make a quiz, send it out, track results... that’s it." />
+  <meta property="og:image" content="/assets/images/default-quiz-image.png" />
+
+  <!-- <meta name="FB_ID" content="<%= get_fb_id %>"/> -->
+
+  <!-- Hack for fackbook redirect anchor -->
+  <script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        window.location.hash = '';
+    }
+  </script>
+
+  <link rel="stylesheet" href="">
+  
+  <script src="/assets/javascripts/modernizr.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/stylesheets/application.css">
+
+  <!-- Fav and Touch Icons -->
+  <link href="assets/ico/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <link href="assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-152-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+
+</head>
+<body>
+  <!--[if lt IE 10]>You are using an outdated version of Internet Explorer.  Qzzr is not compatible with any IE version under 10. Please go to Windows Updates and install the latest version.<![endif]-->
+ <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M8HD4R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M8HD4R');</script>
+
+<div id="fb-root"></div>
+
+
+
+<nav class="nav-bar">
+  <a href="/" class='nav-bar-logo logo logo-white'>
+    QZZR
+  </a>
+  <h1 class="nav-bar-subtitle">Quizzes for you by you</h1>
+</nav>
+
+<nav class="nav-bar-marketing">
+  <section class="nav-bar-actions">
+    <div class="nav-bar-action dropdown mln is-active">
+      <a class='nav-bar-action button button-transparent mtn' <a href="#toggleShowUses">Uses</a>
+      <ul class="dropdown-menu list list-picker">
+        <li class="list-item pl3">
+          <a href="/drive-social-traffic" class='list-item-label'>
+            Drive Social Traffic
+          </a>
+        </li>
+        <li class="list-item pl3">
+          <a href="/generate-qualified-leads" class='list-item-label h8'>
+            Capture Qualified Leads
+          </a>
+        </li>
+        <li class="list-item pl3">
+          <a href="/present-targeted-offers" class='list-item-label'>
+            Present Targeted Offers
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="/pricing" class='nav-bar-action button button-transparent'>Pricing</a>
+    <a href="/about" class='nav-bar-action button button-transparent'>About</a>
+    <a href="http://blog.qzzr.com"  class='nav-bar-action button button-transparent'>Blog</a>
+  </section>
+</nav>
+
+<div class="page-wrapper">
+  <section class="hero hero-pricing">
+    <section class="hero-content">
+        <h1 class="hero-heading h1 red-color">
+          Simple tool,<br>powerful results.
+        </h1>
+      <section class="hero-blurb">
+        <h4 class="h5">
+          Upgrade, downgrade, or cancel at any time
+        </h4>
+      </section>
+    </section>
+
+    <section class="hero-media">
+    </section>
+  </section>
+
+
+  <div class="grid pb5">
+
+    <div class="col-8 col-offset-2 col-wxl-12 col-wxl-offset-0">
+      <h3 class="h2 text-center pb3">The free plan</h3>
+      <h6 class="text-center opacity-5 pb4">
+        All our plans come with all these features. Yep, even our free plan.
+      </h6>
+    </div>
+
+    <div class="col-8 col-offset-2 col-wxl-10 col-wxl-offset-1 col-wl-12 col-wl-offset-0 pb5">
+      <div class="grid grid-nested text-center">
+        <ul class="list pb4 col-6">
+          <li class="list-item"><strong class="b">5</strong> lead captures <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="You can add a lead form and custom text before or after the results page of your quiz."><i class="icon icon-ss-info"></i></span></li>
+          <li class="list-item"><strong class="b">10</strong> offer click-thrus <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Present an offer at the end of your quiz to send people to another site or page."><i class="icon icon-ss-info"></i></span></li>
+          <li class="list-item"><strong class="b">10</strong> tracked scores <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Prompt users to log in before taking your quiz so you can see who took it and what they got."><i class="icon icon-ss-info"></i></span></li>
+          <li class="list-item"><strong class="b">Unlimited</strong> social shares<span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Shares via our social media buttons link back to your site."><i class="icon icon-ss-info"></i></span></li>
+          <li class="list-item">Unlimited responses</li>
+          <li class="list-item">Unlimited quizzes</li>
+          <li class="list-item">Unlimited questions</li>
+        </ul>
+        <ul class="list pb4 col-6">
+          <li class="list-item">All quiz types</li>
+          <li class="list-item">Multimedia content</li>
+          <li class="list-item">Embed anywhere</li>
+          <li class="list-item">Beautiful on any device</li>
+          <li class="list-item">Custom themes &amp; colors</li>
+          <li class="list-item">Quiz level analytics</li>
+          <li class="list-item">Basic quiz logic</li>
+          <li class="list-item">Community support</li>
+        </ul>
+      </div>
+      <div class="text-center">
+        <a href="#showSignup" class="button button-outline button-primary">Get started for free now</a>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <h3 class="h2 text-center pb5">Upgrade for more awesomeness</h3>
+
+    <div class="grid pb5">
+
+    <div class="col-8 col-offset-2 col-wxl-12 col-wxl-offset-0">
+      <h3 class="h2 text-center pb3">The free plan</h3>
+      <h6 class="text-center opacity-5 pb4">
+        All our plans come with all these features. Yep, even our free plan.
+      </h6>
+    </div>
+
+    <div class="col-8 col-offset-2 col-wxl-10 col-wxl-offset-1 col-wl-12 col-wl-offset-0 pb5">
+      <div class="grid grid-nested text-center">
+        <ul class="list pb4 col-6">
+          <li class="list-item"><strong class="b">5</strong> lead captures <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="You can add a lead form and custom text before or after the results page of your quiz."><i class="icon icon-ss-info"></i></span></li>
+          <li class="list-item"><strong class="b">10</strong> offer click-thrus <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Present an offer at the end of your quiz to send people to another site or page."><i class="icon icon-ss-info"></i></span></li>
+          <li class="list-item"><strong class="b">10</strong> tracked scores <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Prompt users to log in before taking your quiz so you can see who took it and what they got."><i class="icon icon-ss-info"></i></span></li>
+          <li class="list-item"><strong class="b">Unlimited</strong> social shares<span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Shares via our social media buttons link back to your site."><i class="icon icon-ss-info"></i></span></li>
+          <li class="list-item">Unlimited responses</li>
+          <li class="list-item">Unlimited quizzes</li>
+          <li class="list-item">Unlimited questions</li>
+        </ul>
+        <ul class="list pb4 col-6">
+          <li class="list-item">All quiz types</li>
+          <li class="list-item">Multimedia content</li>
+          <li class="list-item">Embed anywhere</li>
+          <li class="list-item">Beautiful on any device</li>
+          <li class="list-item">Custom themes &amp; colors</li>
+          <li class="list-item">Quiz level analytics</li>
+          <li class="list-item">Basic quiz logic</li>
+          <li class="list-item">Community support</li>
+        </ul>
+      </div>
+      <div class="text-center">
+        <a data-ember-action="7" class="button button-outline button-primary">Get started for free now</a>
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <h3 class="h2 text-center pb5">Upgrade for more awesomeness</h3>
+
+    <script id="metamorph-20-end" type="text/x-placeholder"></script>
+
+
+    <script id="metamorph-24-start" type="text/x-placeholder"></script><script id="metamorph-21-start" type="text/x-placeholder"></script>
+      <div id="ember1170" class="ember-view"><section class="col-3 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
+  <article class="app-plan-choice box box-pricing box-pricing-standard" data-bindattr-8="8">
+    <header class="box-header">
+      <h3 class="box-header-heading h4">
+        <script id="metamorph-25-start" type="text/x-placeholder"></script>Standard<script id="metamorph-25-end" type="text/x-placeholder"></script> 
+      </h3>
+      <strong class="b"><script id="metamorph-26-start" type="text/x-placeholder"></script>$19.00<script id="metamorph-26-end" type="text/x-placeholder"></script>/mo</strong>
+      <h6 class="box-header-subheading"><script id="metamorph-27-start" type="text/x-placeholder"></script>for small companies, bloggers &amp; trainers<script id="metamorph-27-end" type="text/x-placeholder"></script></h6>
+    </header>
+    <section class="box-body">
+      <ul>
+        <li class="list-item"><a href="http://blog.qzzr.co/capture-qualified-leads-quiz/"><strong class="b"><script id="metamorph-28-start" type="text/x-placeholder"></script>50<script id="metamorph-28-end" type="text/x-placeholder"></script></strong> lead captures <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="You can add a lead form and custom text before or after the results page of your quiz."><i class="icon-ss-info icon"></i></span></a></li>
+        <li class="list-item"><a href="http://blog.qzzr.co/present-targeted-offers-quiz/"><strong class="b"><script id="metamorph-29-start" type="text/x-placeholder"></script>200<script id="metamorph-29-end" type="text/x-placeholder"></script></strong> offer click-thrus <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Present an offer at the end of your quiz to send people to another site or page."><i class="icon-ss-info icon"></i></span></a></li>
+        <li class="list-item"><a href="http://www.qzzr.co/track-quiz-scores/"><strong class="b"><script id="metamorph-30-start" type="text/x-placeholder"></script>250<script id="metamorph-30-end" type="text/x-placeholder"></script></strong> tracked scores <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Prompt users to log in before taking your quiz so you can see who took it and what they got."><i class="icon-ss-info"></i></span></a></li>
+        <li class="list-item"><a href="http://blog.qzzr.co/create-viral-outcome-based-quizzes/"><strong class="b">Unlimited</strong> social shares<span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Shares via our social media buttons link back to your site."><i class="icon-ss-info icon"></i></span></a></li>
+        <script id="metamorph-31-start" type="text/x-placeholder"></script>
+          <li class="list-item">Reduced branding <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Reduced Qzzr branding in share messages to Facebook, Twitter, and Linkedin."><i class="icon-ss-info icon"></i></span></li>
+        <script id="metamorph-31-end" type="text/x-placeholder"></script>
+        <script id="metamorph-32-start" type="text/x-placeholder"></script><script id="metamorph-32-end" type="text/x-placeholder"></script>
+      </ul>
+    </section>
+    <footer class="box-footer">
+      <script id="metamorph-33-start" type="text/x-placeholder"></script>
+        <a data-ember-action="9" class="app-select-plan button"><script id="metamorph-34-start" type="text/x-placeholder"></script>Get started<script id="metamorph-34-end" type="text/x-placeholder"></script></a>
+      <script id="metamorph-33-end" type="text/x-placeholder"></script>
+    </footer>
+  </article> 
+</section>
+</div>
+    <script id="metamorph-21-end" type="text/x-placeholder"></script><script id="metamorph-22-start" type="text/x-placeholder"></script>
+      <div id="ember1174" class="ember-view"><section class="col-3 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
+  <article class="app-plan-choice box box-pricing box-pricing-plus" data-bindattr-10="10">
+    <header class="box-header">
+      <h3 class="box-header-heading h4">
+        <script id="metamorph-35-start" type="text/x-placeholder"></script>Plus<script id="metamorph-35-end" type="text/x-placeholder"></script> 
+      </h3>
+      <strong class="b"><script id="metamorph-36-start" type="text/x-placeholder"></script>$49.00<script id="metamorph-36-end" type="text/x-placeholder"></script>/mo</strong>
+      <h6 class="box-header-subheading"><script id="metamorph-37-start" type="text/x-placeholder"></script>for marketers and medium sized channels<script id="metamorph-37-end" type="text/x-placeholder"></script></h6>
+    </header>
+    <section class="box-body">
+      <ul>
+        <li class="list-item"><a href="http://blog.qzzr.co/capture-qualified-leads-quiz/"><strong class="b"><script id="metamorph-38-start" type="text/x-placeholder"></script>150<script id="metamorph-38-end" type="text/x-placeholder"></script></strong> lead captures <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="You can add a lead form and custom text before or after the results page of your quiz."><i class="icon-ss-info icon"></i></span></a></li>
+        <li class="list-item"><a href="http://blog.qzzr.co/present-targeted-offers-quiz/"><strong class="b"><script id="metamorph-39-start" type="text/x-placeholder"></script>600<script id="metamorph-39-end" type="text/x-placeholder"></script></strong> offer click-thrus <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Present an offer at the end of your quiz to send people to another site or page."><i class="icon-ss-info icon"></i></span></a></li>
+        <li class="list-item"><a href="http://www.qzzr.co/track-quiz-scores/"><strong class="b"><script id="metamorph-40-start" type="text/x-placeholder"></script>1,000<script id="metamorph-40-end" type="text/x-placeholder"></script></strong> tracked scores <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Prompt users to log in before taking your quiz so you can see who took it and what they got."><i class="icon-ss-info"></i></span></a></li>
+        <li class="list-item"><a href="http://blog.qzzr.co/create-viral-outcome-based-quizzes/"><strong class="b">Unlimited</strong> social shares<span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Shares via our social media buttons link back to your site."><i class="icon-ss-info icon"></i></span></a></li>
+        <script id="metamorph-41-start" type="text/x-placeholder"></script>
+          <li class="list-item">Reduced branding <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Reduced Qzzr branding in share messages to Facebook, Twitter, and Linkedin."><i class="icon-ss-info icon"></i></span></li>
+        <script id="metamorph-41-end" type="text/x-placeholder"></script>
+        <script id="metamorph-42-start" type="text/x-placeholder"></script><script id="metamorph-42-end" type="text/x-placeholder"></script>
+      </ul>
+    </section>
+    <footer class="box-footer">
+      <script id="metamorph-43-start" type="text/x-placeholder"></script>
+        <a data-ember-action="11" class="app-select-plan button"><script id="metamorph-44-start" type="text/x-placeholder"></script>Get started<script id="metamorph-44-end" type="text/x-placeholder"></script></a>
+      <script id="metamorph-43-end" type="text/x-placeholder"></script>
+    </footer>
+  </article> 
+</section>
+</div>
+    <script id="metamorph-22-end" type="text/x-placeholder"></script><script id="metamorph-23-start" type="text/x-placeholder"></script>
+      <div id="ember1178" class="ember-view"><section class="col-3 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
+  <article class="app-plan-choice box box-pricing box-pricing-pro" data-bindattr-12="12">
+    <header class="box-header">
+      <h3 class="box-header-heading h4">
+        <script id="metamorph-45-start" type="text/x-placeholder"></script>Pro<script id="metamorph-45-end" type="text/x-placeholder"></script> 
+      </h3>
+      <strong class="b"><script id="metamorph-46-start" type="text/x-placeholder"></script>$99.00<script id="metamorph-46-end" type="text/x-placeholder"></script>/mo</strong>
+      <h6 class="box-header-subheading"><script id="metamorph-47-start" type="text/x-placeholder"></script>for publishers and large channels<script id="metamorph-47-end" type="text/x-placeholder"></script></h6>
+    </header>
+    <section class="box-body">
+      <ul>
+        <li class="list-item"><a href="http://blog.qzzr.co/capture-qualified-leads-quiz/"><strong class="b"><script id="metamorph-48-start" type="text/x-placeholder"></script>500<script id="metamorph-48-end" type="text/x-placeholder"></script></strong> lead captures <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="You can add a lead form and custom text before or after the results page of your quiz."><i class="icon-ss-info icon"></i></span></a></li>
+        <li class="list-item"><a href="http://blog.qzzr.co/present-targeted-offers-quiz/"><strong class="b"><script id="metamorph-49-start" type="text/x-placeholder"></script>2,000<script id="metamorph-49-end" type="text/x-placeholder"></script></strong> offer click-thrus <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Present an offer at the end of your quiz to send people to another site or page."><i class="icon-ss-info icon"></i></span></a></li>
+        <li class="list-item"><a href="http://www.qzzr.co/track-quiz-scores/"><strong class="b"><script id="metamorph-50-start" type="text/x-placeholder"></script>Unlimited<script id="metamorph-50-end" type="text/x-placeholder"></script></strong> tracked scores <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Prompt users to log in before taking your quiz so you can see who took it and what they got."><i class="icon-ss-info"></i></span></a></li>
+        <li class="list-item"><a href="http://blog.qzzr.co/create-viral-outcome-based-quizzes/"><strong class="b">Unlimited</strong> social shares<span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Shares via our social media buttons link back to your site."><i class="icon-ss-info icon"></i></span></a></li>
+        <script id="metamorph-51-start" type="text/x-placeholder"></script>
+          <li class="list-item">Reduced branding <span class="ember-view tooltip-top tooltip-long help-icon" data-tooltip="Reduced Qzzr branding in share messages to Facebook, Twitter, and Linkedin."><i class="icon-ss-info icon"></i></span></li>
+        <script id="metamorph-51-end" type="text/x-placeholder"></script>
+        <script id="metamorph-52-start" type="text/x-placeholder"></script>
+          <li class="list-item">Premium support </li>
+        <script id="metamorph-52-end" type="text/x-placeholder"></script>
+      </ul>
+    </section>
+    <footer class="box-footer">
+      <script id="metamorph-53-start" type="text/x-placeholder"></script>
+        <a data-ember-action="13" class="app-select-plan button"><script id="metamorph-54-start" type="text/x-placeholder"></script>Get started<script id="metamorph-54-end" type="text/x-placeholder"></script></a>
+      <script id="metamorph-53-end" type="text/x-placeholder"></script>
+    </footer>
+  </article> 
+</section>
+</div>
+    <script id="metamorph-23-end" type="text/x-placeholder"></script><script id="metamorph-24-end" type="text/x-placeholder"></script>
+
+    <section class="col-3 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
+      <article class="box box-pricing box-pricing-enterprise">
+        <header class="box-header">
+          <h3 class="box-header-heading h4">
+            Enterprise
+          </h3>
+          <strong class="b">Starting at $499/mo</strong>
+        </header>
+        <section class="box-body">
+          <ul>
+            <li>White Label</li>
+            <li>Multiple accounts</li>
+            <li>VIP support</li>
+            <li>API access</li>
+          </ul>
+        </section>
+        <footer class="box-footer">
+          <a href="mailto:sales@qzzr.co?subject=Qzzr Enterprise..." class="button button-outline">Let’s talk</a>
+        </footer>
+      </article>
+    </section>
+  </div>
+
+    <section class="col-3 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
+      <article class="box box-pricing box-pricing-enterprise">
+        <header class="box-header">
+          <h3 class="box-header-heading h4">
+            Enterprise
+          </h3>
+          <strong class="b">Starting at $499/mo</strong>
+        </header>
+        <section class="box-body">
+          <ul>
+            <li>White Label</li>
+            <li>Multiple accounts</li>
+            <li>VIP support</li>
+            <li>API access</li>
+          </ul>
+        </section>
+        <footer class="box-footer">
+          <a href="mailto:sales@qzzr.co?subject=Qzzr Enterprise..." class="button button-outline">Let’s talk</a>
+        </footer>
+      </article>
+    </section>
+  </div>
+
+  <div class="grid">
+    <div class="col-10 col-offset-1 text-center">
+      <p class="">
+        <strong class="b">We guarantee that you will absolutely love Qzzr and our support.</strong><br>
+        <span class="opacity-5">If you don’t for any reason, just let us know and we will either make it right or provide a full refund for your service.</span>
+      </p>
+      <hr class="rule mb6 mt6">
+    </div>
+  </div>
+
+  <div class="text-center pb7">
+    <p class="h3 mb4">Want a quiz made for you?</p>
+    {{#link-to 'marketing.agencies' class='button button-outline button-primary'}}
+      Talk with one of these agencies
+    </a>
+    <hr class="rule mt6">
+  </div>
+
+  <div class="grid text-center">
+    <h2 class="h2 pb5">Does Qzzr _______?</h2>
+    <div class="col-6 col-wm-12">
+      <ul class="list-yes">
+        <li class="list-item mb2">have a free account? <p class="mint-color">Yep.</p></li>
+        <li class="list-item mb2">allow me to upgrade, downgrade, or cancel at any time? <p class="mint-color">Mmmhmm.</p></li>
+        <li class="list-item mb2">have a capable team behind it who has done this many times before? <p class="mint-color">Most definitely.</p></li>
+        <li class="list-item mb2">have enough funding? <p class="mint-color">You betcha.</p></li>
+        <li class="list-item mb2">have good support in case I need help? <p class="mint-color">Only the best.</p></li>
+        <li class="list-item mb2">have bandwidth to support my insanely viral quiz on my huge channel? <p class="mint-color">*nods head*.</p></li>
+        <li class="list-item mb2">work on any device or screen size? <p class="mint-color">Pretty much.</p></li>
+        <li class="list-item mb2">share easily on social media? <p class="mint-color">So easy.</p></li>
+        <li class="list-item mb2">embed on any site or blog? <p class="mint-color">Si.</p></li>
+        <li class="list-item mb2">have SEO friendly content? <p class="mint-color">Yes.</p></li>
+        <li class="list-item mb2">let me put in my own company name and logo? <p class="mint-color">Oui.</p></li>
+        <li class="list-item mb2">provide me with my own profile page to launch quizzes from? <p class="mint-color">Yessir(or ma'am).</p></li>
+        <li class="list-item mb2">support images (jpg, png, animated gif)?  <p class="mint-color">Heck yeah!</p></li>
+        <li class="list-item">allow question level feedback? <p class="mint-color">Sure.</p></li>
+        <li class="list-item mb2">randomize question order? <p class="mint-color">It's an option.</p></li>
+        <li class="list-item mb2">allow fixed question order? <p class="mint-color">Affirmative.</p></li>
+        <li class="list-item mb2">randomize answer order? <p class="mint-color">Roger.</p></li>
+        <li class="list-item mb2">allow fixed answer order? <p class="mint-color">Absolutely.</p></li>
+      </ul>
+    </div>
+    <div class="col-6 col-wm-12">
+      <ul class="list-yes">
+        <li class="list-item mb2">allow unlimited answer options? <p class="mint-color">As unlimited as your imagination.</p></li>
+        <li class="list-item mb2">allow unlimited questions? <p class="mint-color">Aye.</p></li>
+        <li class="list-item mb2">allow unlimited quizzes? <p class="mint-color">Yup.</p></li>
+        <li class="list-item mb2">have multiple choice questions? <p class="mint-color">Uh-huh.</p></li>
+        <li class="list-item mb2">have multiple answer questions? <p class="mint-color">Yep.</p></li>
+        <li class="list-item mb2">have true/false questions? <p class="mint-color">Of course.</p></li>
+        <li class="list-item mb2">allow me to attribute images (through description)? <p class="mint-color">Aw yeah!</p></li>
+        <li class="list-item mb2">allow me to require a confirmation before providing a final answer. <p class="mint-color">Confirm-ative.</p></li>
+        <li class="list-item mb2">let me preview my work before I publish? <p class="mint-color">Positive.</p></li>
+        <li class="list-item mb2">give me a link to send in email, add to a site, or place in a document? <p class="mint-color">Yessum.</p></li>
+        <li class="list-item mb2">support stunning background images? <p class="mint-color">You know it.</p></li>
+        <li class="list-item mb2">track the scores and names of people taking a quiz. <p class="mint-color">Dang straight.</p></li>
+        <li class="list-item mb2">redirect the shares to where my quiz is embedded? <p class="mint-color">Yah.</p></li>
+        <li class="list-item mb2">allow me to capture leads? <p class="mint-color">Only the best.</p></li>
+        <li class="list-item mb2">tell me how my leads answered my questions? <p class="mint-color">Ja.</p></li>
+        <li class="list-item mb2">allow me to present an offer at the end of a quiz and send someone to a landing page. <p class="mint-color">Definitely.</p></li>
+        <li class="list-item mb2">show me rich analytics about my quiz? <p class="mint-color">Oh yes.</p></li>
+        <li class="list-item mb2">allow me to export my scores or leads? <p class="mint-color">Every last one.</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-center pb7">
+    <hr class="rule mt6 mb6">
+    <p class="h3 mb4">Still not sure? We would love to talk to you.</p>
+    <a href="mailto:hello@qzzr.co" target="_blank" class="button button-outline button-primary">
+      Get in touch
+    </a>
+  </div>
+</div>
+
+
+ 
+  <div class="page-wrapper">
+
+  <nav class="text-center purple-bg pt4 pb4">
+    <a href="https://app.qzzr.com/account/signup" class="button button-large h6 b button-outline button-white">
+      <span class="button-label pt3" style="display: block;">Get started now</span>
+      <span class="h8-cap opacity-5 h mbn mtn">It's free</span>
+    </a>
+  </nav>
+
+  <div class="grid gray-dark-bg pb4">
+    <div class="col-10 col-offset-1 col-wxxxl-12 col-wxxxl-offset-0">
+
+      <div class="grid grid-nested">
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Overview</li>
+            <li class="list-item">
+              <a href="/" class="list-item-link">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="/pricing" class='list-item-link'>Pricing</a>
+            </li>
+            <li class="list-item">
+              <a href="/about" class='list-item-link'>About</a>
+            </li>
+            <li class="list-item">
+              <a href="http://blog.qzzr.com" class="list-item-link">
+                Blog
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="/agencies" class='list-item-link'>Need a quiz made?</a>
+            </li>
+        </div>
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Use cases</li>
+            <li class="list-item">
+              <a href="/drive-social-traffic" class='list-item-link'>Drive social traffic</a>
+            </li>
+            <li class="list-item">
+              <a href="/generate-qualified-leads" class='list-item-link'>Generate qualified leads</a>
+            </li>
+            <li class="list-item">
+              <a href="/present-targeted-offers" class='list-item-link'>Present targeted offers</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Be friendly</li>
+            <li class="list-item">
+              <a href="https://www.facebook.com/pages/QZZR/200008303516674" class="list-item-link">
+                Like us on Facebook
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="https://twitter.com/Qzzr_" class="list-item-link">
+                Follow us on Twitter
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="https://www.linkedin.com/company/qzzr" class="list-item-link">
+                Do something on Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">&copy; 2014 Qzzr</li>
+            <li class="list-item">
+              <a href="/terms" class='list-item-link'>Terms of service</a>
+            </li>
+            <li class="list-item">
+              <a href="/privacy" class='list-item-link'>Privacy policy</a>
+            </li>
+            <li class="list-item">
+              <a href="/content" class='list-item-link'>Content Guidelines</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Google Analytics -->
+  // <script>
+  //   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  //   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  //   ga('create', '<%= ENV['GOOGLE_ANALYTICS_ID'] %>', 'auto', {'name':'qzzrTracker'});
+  //   ga('qzzrTracker.require', 'displayfeatures');
+  //   ga('qzzrTracker.require', 'ecommerce', 'ecommerce.js');
+  //   ga('qzzrTracker.set', 'dimension4', '<%= @session_identifier %>');
+  //   ga('qzzrTracker.set', 'location', '<%= @unfettered_url.html_safe %>');
+    
+  //   <% if user_signed_in? %>
+  //     ga('qzzrTracker.set', 'dimension2', '<%= current_user.id %>');
+  //   <% else %>
+  //     ga('qzzrTracker.set', 'dimension3', '<%= get_temp_user_id %>');
+  //   <% end %>
+
+  //   <% unless @quiz %>
+  //     ga('qzzrTracker.send', 'pageview');
+  //     ga('qzzrTracker.send', 'event', 'Marketing','Entry');
+  //   <% end %>
+  // </script>
+
+<!-- Browser Update -->
+<script type="text/javascript"> 
+  var $buoop = {vs:{i:9,f:15,o:15,s:5.1,n:9}}; 
+  $buoop.ol = window.onload; 
+  window.onload=function(){ 
+    try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
+    var e = document.createElement("script"); 
+    e.setAttribute("type", "text/javascript"); 
+    e.setAttribute("src=", "//browser-update.org/update.js"); 
+    document.body.appendChild(e); 
+  } 
+</script>
+
+<!-- Typekit -->
+<script type="text/javascript" src="//use.typekit.net/ncg3ahx.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</body>
+</html>

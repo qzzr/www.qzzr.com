@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+  <meta name="description" content="Qzzr is a simple online quiz tool that allows you to quickly create beautiful quizzes, post them anywhere on the web, view on any device, and easily track results.">
+
+  <meta property="og:title" content="Qzzr, the world's simplest quiz tool" />
+  <meta property="og:url" content="http://qzzr.co" />
+  <meta property="og:description" content="Make a quiz, send it out, track results... that’s it." />
+  <meta property="og:image" content="/assets/images/default-quiz-image.png" />
+
+  <!-- <meta name="FB_ID" content="<%= get_fb_id %>"/> -->
+
+  <!-- Hack for fackbook redirect anchor -->
+  <script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        window.location.hash = '';
+    }
+  </script>
+
+  <link rel="stylesheet" href="">
+  
+  <script src="/assets/javascripts/modernizr.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/stylesheets/application.css">
+
+  <!-- Fav and Touch Icons -->
+  <link href="assets/ico/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <link href="assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-152-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+
+</head>
+<body>
+  <!--[if lt IE 10]>You are using an outdated version of Internet Explorer.  Qzzr is not compatible with any IE version under 10. Please go to Windows Updates and install the latest version.<![endif]-->
+ <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M8HD4R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M8HD4R');</script>
+
+<div id="fb-root"></div>
+
+
+
+<nav class="nav-bar">
+  <a href="/" class='nav-bar-logo logo logo-white'>
+    QZZR
+  </a>
+  <h1 class="nav-bar-subtitle">Quizzes for you by you</h1>
+</nav>
+
+<nav class="nav-bar-marketing">
+  <section class="nav-bar-actions">
+    <div class="nav-bar-action dropdown mln is-active">
+      <a class='nav-bar-action button button-transparent mtn' <a href="#toggleShowUses">Uses</a>
+      <ul class="dropdown-menu list list-picker">
+        <li class="list-item pl3">
+          <a href="/drive-social-traffic" class='list-item-label'>
+            Drive Social Traffic
+          </a>
+        </li>
+        <li class="list-item pl3">
+          <a href="/generate-qualified-leads" class='list-item-label h8'>
+            Capture Qualified Leads
+          </a>
+        </li>
+        <li class="list-item pl3">
+          <a href="/present-targeted-offers" class='list-item-label'>
+            Present Targeted Offers
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="/pricing" class='nav-bar-action button button-transparent'>Pricing</a>
+    <a href="/about" class='nav-bar-action button button-transparent'>About</a>
+    <a href="http://blog.qzzr.com"  class='nav-bar-action button button-transparent'>Blog</a>
+  </section>
+</nav>
+
+<div class="page-wrapper">
+  <section class="hero hero-about">
+    <section class="hero-content">
+      <h1 class="hero-heading h1">
+        Qzzr's Story
+      </h1>
+      <section class="hero-blurb">
+        <p>
+          In our combined past we’ve been public school teachers, corporate trainers, school-of-rock owners, learning strategists to Fortune 100 companies, coaches, creators of the world’s foremost social learning software, keynote speakers, bloggers, and Sunday school teachers.
+        </p>
+        <p>
+          We created Qzzr because although there are many quiz tools out there, none of them are awesome.  We wanted to bring our bag of tricks to a space that has been filled with mediocre tools and and create something really special.  
+        </p>
+        <p>
+          By creating the world’s simplest, most beautiful and mobile-friendly quiz creation tool, we aim to create the world’s largest collection of quizzes on any topic accessible to anyone for free.
+        </p>
+        <p>
+          We like to think we’re powering the quiz revolution.  Qwizards unite.
+        </p>
+      </section>
+    </section>
+  </section>
+
+  <hr class="rule mb6 mt6">
+
+  <h2 class="h2 text-center pb2">
+    Our team
+  </h2>
+  <h4 class="h4 text-center pb4">
+    (in order of appearance)
+  </h4>
+  <a id="team"></a>
+  
+  <div class="grid">
+    <div class="col-8 col-offset-2 col-wm-12 col-wm-offset-0 opacity-5 text-center pb5">
+    This is not your average team. We find it’s more fun to work with people who are at the top of their game. We admire each other’s work. We covet one another’s skill set. We wouldn’t want to do this with anyone else.
+    </div>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="grid" id="#bios">
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/josh.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Josh Little
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Qwizard #1 and CEO
+          </h6>
+          <p class="h7 hyphenate opacity-5">Our head cheese cut his teeth as a public school teacher then quickly dove into a career in sales, training, and marketing at Fortune 100 companies.  After his corporate tour of duty he founded, grew, and exited two successful software companies - Maestro and Bloomfire.  He also grows a respectable beard.
+          </p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/joshlittle" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="http://www.linkedin.com/in/littlejosh" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/bucky.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Bucky Flowers
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            The Psychologist
+          </h6>
+          <p class="h7 hyphenate opacity-5">The leader of our product team is a renaissance man with a knack for dissecting how people think. Armed with a degree in psychology, Bucky went on to start several successful companies and finally focus his career on his passion, user experience design at Overstock, Candeo, and Bloomfire.</p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/buckyflowers" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="http://www.linkedin.com/in/buckyflowers" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/bart.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Bart Elison
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Keeper of the Crypt
+          </h6>
+          <p class="h7 hyphenate opacity-5">Q: How can Qzzr be so awesome with such a small team? A: Bart. This is not Bart’s first rodeo. After working at Omniture, he was the original developer and built the team at Money Desktop, followed by carving out value at Sleepy Giant, and G5. We’re not worthy.</p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/RagingViking" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="http://www.linkedin.com/pub/barton-elison/1/680/484" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/jayden.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Jayden Anderson
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Designer of All The Things
+          </h6>
+          <p class="h7 hyphenate opacity-5">A true wunderkind, Jayden has been designing experiences for the web since he was a wee bairn. We feel he is quickly becoming one of the world’s foremost designers. Before joining us, he influenced the product and brand at cool companies like Overstock and KISSmetrics.</p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/jayden_a" class="link link-twitter">Twitter</a>
+          </p>
+        </section>
+      </article>
+    </div>
+    
+  </div>
+
+  <div class="grid">
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/owen.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Owen Fuller
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Chief Qwizard
+          </h6>
+          <p class="h7 hyphenate opacity-5">Torch in hand, Owen leads the global quiz revolution. Before joining Qzzr, Owen founded and led Fit Marketing, one of Utah’s fastest growing companies. He’s also worked in sales and marketing roles at SpinGo, Digis and as the President of an international student exchange program. And of course, he is our token Czech-speaking Alaskan.</p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/owenfuller" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="https://www.linkedin.com/in/owenfuller" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/jacob.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Jacob Graf
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Knight in Shining Armor
+          </h6>
+          <p class="h7 hyphenate opacity-5">Jacob joined our team fresh off a gig in Brazil that left him speaking fluent Portuguese. He's our customers' champion and best friend -- always there with a helping hand and helpful tip. He started out as a squire, but quickly ascended to a seat at the roundtable. Soon, no doubt, he'll be running the place.</p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/jacobtgraf" class="link link-twitter">Twitter</a>
+          </p>
+        </section>
+      </article>
+    </div>
+    
+  </div>
+
+
+  <div class="grid">
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/nathan.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Nate Eborn
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            The Craftsman
+          </h6>
+          <p class="h7 hyphenate opacity-5">Known for his contagious belly laughs and meticulous coding, Nate is the super specialist that keeps the Qzzr ship sailing smoothly. He fine-tuned his web development skills in roles at LinkedIn, Adobe and Novell. Now, he stays busy pushing out killer code at Qzzr by day and watching over his growing brood of mini Eborns at home by night.</p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/nateeborn" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="https://www.linkedin.com/in/nateeborn" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/cameron.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Cameron Bytheway
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            The Prodigy
+          </h6>
+          <p class="h7 hyphenate opacity-5">Cameron is the virtuoso behind Qzzr's forward-thinking development strategies. He earned his reputation as an engineering mastermind at O.C. Tanner and Family Search. Finding innovative ways to scale a business to handle hundreds of millions of users (and dollars) is what makes him tick... but for Cameron to go off, all that's required is an electronic drum set and a funky bass line. </p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/cameronbytheway" class="link link-twitter">Twitter</a>
+          </p>
+        </section>
+      </article>
+    </div>
+    
+  </div>
+
+  <div class="grid">
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/chris-f.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Chris Finkin
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Special Ops
+          </h6>
+          <p class="h7 hyphenate opacity-5">Chris has been a leader at high-growth companies like Orange Soda, Bloomfire and GroSocial by Infusionsoft. We like to think of him as our secret Canadian weapon. He represents the force of the Mounties, fully equipped with an incredible track record in digital marketing, product enhancement and business development.</p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/chrisfinken" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="https://www.linkedin.com/in/chrisfinken" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/chris-k.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Chris Kilbourn
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Rock Star
+          </h6>
+          <p class="h7 hyphenate opacity-5">The co-founder and former guitarist of the popular deathcore band, Chelsea Grin, Chris earned his label as a rock star the old-fashioned way. Beyond his exploits on stage, Chris also built and sold two companies before he turned 25. Prior to joining Qzzr, he was the VP of strategy for the inbound marketing agency, Fit Marketing. </p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/ChrisKilbourn" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="https://www.linkedin.com/in/ChrisKilbourn" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+    
+  </div>
+
+  <div class="grid">
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/jason.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Jason Clark
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Hunter & Gatherer
+          </h6>
+          <p class="h7 hyphenate opacity-5">Jason’s entrepreneurial career started at 13 when he launched a business teaching swimming lessons. His later ventures included technology and solar companies. Our favorite ball of energy, Jason spends his days teaching people how to get Qwizzy with it and making sure that each Qzzr customer is successful. </p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/Jasonqzzr" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="http://www.linkedin.com/pub/jason-clark/2a/ab2/1a2" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/jake.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Jake Richan
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Rocket Surgeon
+          </h6>
+          <p class="h7 hyphenate opacity-5">With a background and degree in web, video and audio production, Jake brings an artist's eye and well-rounded perspective to his engineering craft. At Qzzr, his work makes sure that our back end is covered and our front end sings. Before joining Qzzr, he kept busy building award-winning products at MoneyDesktop.</p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/_jukeman" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="http://www.linkedin.com/in/jakerichan" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+    
+  </div>
+
+  <div class="grid">
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/colby.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Colby Parrish
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            Tour Manager
+          </h6>
+          <p class="h7 hyphenate opacity-5">Colby came to Qzzr from Clearlink where he served as a financial analyst and the Utah Jazz where he was a controller. Nowadays, he's analyzing, counting beans, and keeping books. But not only that. We count on Colby to make sure we are always ready for our next gig. He handles all the logistics and keeps Qzzr in the bright lights on stage. </p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/Jasonqzzr" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="http://www.linkedin.com/pub/jason-clark/2a/ab2/1a2" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+
+    <div class="col-6 col-wxl-12 mb5">
+      <article class="media media-team-member">
+        <section class="media-block">
+          <figure class="figure figure-full figure-rounded">
+            <img src="/assets/images/avatars/ryan.jpg"class="figure-image">
+          </figure>
+        </section>
+        <section class="media-content">
+          <h2 class="h5 pb2">
+            Ryan Hamblin
+          </h2>
+          <h6 class="h8-cap opacity-7 pb2">
+            The Ranger
+          </h6>
+          <p class="h7 hyphenate opacity-5">With a degree in outdoor recreation management, Ryan took a circuitous path to becoming a software engineer. After rising to the top of his cohort at DevMountain, he joined Qzzr to squash bugs and perfect our product. Don't fret though, Ryan is definitely still an expert recreator too. </p>
+          <p class="h7">
+            <a target="_blank" href="https://twitter.com/ryanleehamblin" class="link link-twitter">Twitter</a>
+            <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <a target="_blank" href="http://www.linkedin.com/pub/ryan-hamblin/a3/a7/a88/" class="link link-linkedin">Linkedin</a>
+          </p>
+        </section>
+      </article>
+    </div>
+    
+  </div>
+
+</div>
+
+<div class="page-wrapper">
+  <h2 class="h2 text-center pt7 pb4">
+    Our investors
+  </h2>
+  
+  <div class="grid">
+    <div class="col-8 col-offset-2 col-wm-12 col-wm-offset-0 opacity-5 text-center pb3">
+      Qzzr is backed by a collective of lovely and talented entrepreneurs and investors.
+    </div>
+  </div>
+</div>
+
+<div class="page-wrapper grid">
+
+  <div class="col-8 col-offset-2 col-wm-12 col-wm-offset-0 text-center">
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/gavin.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        <h3 class="h7">Gavin Christensen</h3>
+        <h6 class="h9 opacity-5">Kickstart Seed fund</h6>
+        <p class="h7">
+          <a target="_blank" href="https://twitter.com/KickstartFund" class="link link-twitter">Twitter</a>
+          <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+          <a target="_blank" href="http://www.linkedin.com/in/gavinchristensen" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/chad.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        <h3 class="h7">Chad Packard</h3>
+        <h6 class="h9 opacity-5">Pelion Venture Partners</h6>
+        <p class="h7">
+          <a target="_blank" href="http://www.linkedin.com/pub/chad-packard/2/702/239" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/ben.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        <h3 class="h7">Ben Capell</h3>
+        <h6 class="h9 opacity-5">Peterson Ventures</h6>
+        <p class="h7">
+          <a target="_blank" href="http://www.linkedin.com/in/bencapell" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/tony.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        <h3 class="h7">Tony Grover</h3>
+        <h6 class="h9 opacity-5">RPM Ventures</h6>
+        <p class="h7">
+          <a target="_blank" href="http://www.linkedin.com/in/tonygroverrpmvc" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/josh.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        Josh Little
+        <p class="h7">
+          <a target="_blank" href="https://twitter.com/joshlittle" class="link link-twitter">Twitter</a>
+          <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+          <a target="_blank" href="http://www.linkedin.com/in/littlejosh" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/bucky.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        Bucky Flowers
+        <p class="h7">
+          <a target="_blank" href="https://twitter.com/buckyflowers" class="link link-twitter">Twitter</a>
+          <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+          <a target="_blank" href="http://www.linkedin.com/in/buckyflowers" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/chris.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        Chris Finken
+        <p class="h7">
+          <a target="_blank" href="https://twitter.com/chrisfinken" class="link link-twitter">Twitter</a>
+          <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+          <a target="_blank" href="http://www.linkedin.com/in/chrisfinken" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/derek.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        Derek Miner
+        <p class="h7">
+          <a target="_blank" href="https://twitter.com/derekminer" class="link link-twitter">Twitter</a>
+          <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+          <a target="_blank" href="http://www.linkedin.com/profile/view?id=5031488&authType=NAME_SEARCH&authToken=nidu&locale=en_US&srchid=2088770911398880795663&srchindex=2&srchtotal=5&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A2088770911398880795663%2CVSRPtargetId%3A5031488%2CVSRPcmpt%3Aprimary" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/zach.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        Zach Mangum
+        <p class="h7">
+          <a target="_blank" href="https://twitter.com/zachmangum" class="link link-twitter">Twitter</a>
+          <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+          <a target="_blank" href="http://www.linkedin.com/in/zachmangum" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+    <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/trent.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        Trent Read
+        <p class="h7">
+          <a target="_blank" href="https://twitter.com/TrentRead" class="link link-twitter">Twitter</a>
+          <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+          <a target="_blank" href="http://www.linkedin.com/pub/trent-read/0/933/226" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+
+     <figure class="figure figure-full figure-investor">
+        <img src="/assets/images/avatars/mark.jpg"class="figure-image">
+      <figcaption class="figure-caption">
+        Mark Newman
+        <p class="h7">
+          <a target="_blank" href="https://twitter.com/hirevue" class="link link-twitter">Twitter</a>
+          <span class="opacity-5">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+          <a target="_blank" href="https://www.linkedin.com/profile/view?id=924999" class="link link-linkedin">Linkedin</a>
+        </p>
+      </figcaption>
+    </figure>
+  </div>
+    
+</div>
+
+<div class="page-wrapper">
+  <h2 class="h2 text-center pt6 pb4">
+    Our habitat
+  </h2>
+
+  <div class="grid">
+    <div class="col-8 col-offset-2 col-wm-12 col-wm-offset-0 opacity-5 text-center pb4">
+      Set in the mountains of Utah, our lair is on historic Main Street in Lehi.  While also being the backdrop for the original Footloose movie, it’s just a cool place to be.
+    </div>
+  </div>
+
+  <div class="grid grid-gallery grid-gallery-about">
+    <div class="col-2">
+      <figure class="figure figure-gallery-about">
+        <span class="figure-image figure-about-2">
+        </span>
+      </figure>
+      <figure class="figure figure-gallery-about">
+        <span class="figure-image figure-about-4">
+        </span>
+      </figure>
+      <figure class="figure figure-gallery-about">
+        <span class="figure-image figure-about-3">
+        </span>
+      </figure>
+    </div>
+    <div class="col-6">
+      <figure class="figure figure-gallery-about">
+        <span class="figure-image figure-about-10">
+        </span>
+      </figure>
+    </div>
+    <div class="col-4">
+      <figure class="figure figure-gallery-about">
+        <span class="figure-image figure-about-7">
+        </span>
+      </figure>
+      <div class="col-6">
+        <figure class="figure figure-gallery-about">
+          <span class="figure-image figure-about-6">
+          </span>
+        </figure>
+      </div>
+      <div class="col-6">
+        <figure class="figure figure-gallery-about">
+          <span class="figure-image figure-about-5">
+          </span>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-8 col-offset-2 text-center pt6 pb6">
+      <p class="h4 mb3">Have questions or just wanna say hi?</p>
+      <a href="mailto:hello@qzzr.co" target="_blank" class="button button-outline button-primary">
+        Drop us a line
+      </a>
+    </div>
+  </div>
+</div>
+
+ 
+  <div class="page-wrapper">
+
+  <nav class="text-center purple-bg pt4 pb4">
+    <a href="https://app.qzzr.com/account/signup" class="button button-large h6 b button-outline button-white">
+      <span class="button-label pt3" style="display: block;">Get started now</span>
+      <span class="h8-cap opacity-5 h mbn mtn">It's free</span>
+    </a>
+  </nav>
+
+  <div class="grid gray-dark-bg pb4">
+    <div class="col-10 col-offset-1 col-wxxxl-12 col-wxxxl-offset-0">
+
+      <div class="grid grid-nested">
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Overview</li>
+            <li class="list-item">
+              <a href="/" class="list-item-link">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="/pricing" class='list-item-link'>Pricing</a>
+            </li>
+            <li class="list-item">
+              <a href="/about" class='list-item-link'>About</a>
+            </li>
+            <li class="list-item">
+              <a href="http://blog.qzzr.com" class="list-item-link">
+                Blog
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="/agencies" class='list-item-link'>Need a quiz made?</a>
+            </li>
+        </div>
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Use cases</li>
+            <li class="list-item">
+              <a href="/drive-social-traffic" class='list-item-link'>Drive social traffic</a>
+            </li>
+            <li class="list-item">
+              <a href="/generate-qualified-leads" class='list-item-link'>Generate qualified leads</a>
+            </li>
+            <li class="list-item">
+              <a href="/present-targeted-offers" class='list-item-link'>Present targeted offers</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Be friendly</li>
+            <li class="list-item">
+              <a href="https://www.facebook.com/pages/QZZR/200008303516674" class="list-item-link">
+                Like us on Facebook
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="https://twitter.com/Qzzr_" class="list-item-link">
+                Follow us on Twitter
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="https://www.linkedin.com/company/qzzr" class="list-item-link">
+                Do something on Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">&copy; 2014 Qzzr</li>
+            <li class="list-item">
+              <a href="/terms" class='list-item-link'>Terms of service</a>
+            </li>
+            <li class="list-item">
+              <a href="/privacy" class='list-item-link'>Privacy policy</a>
+            </li>
+            <li class="list-item">
+              <a href="/content" class='list-item-link'>Content Guidelines</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Google Analytics -->
+  // <script>
+  //   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  //   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  //   ga('create', '<%= ENV['GOOGLE_ANALYTICS_ID'] %>', 'auto', {'name':'qzzrTracker'});
+  //   ga('qzzrTracker.require', 'displayfeatures');
+  //   ga('qzzrTracker.require', 'ecommerce', 'ecommerce.js');
+  //   ga('qzzrTracker.set', 'dimension4', '<%= @session_identifier %>');
+  //   ga('qzzrTracker.set', 'location', '<%= @unfettered_url.html_safe %>');
+    
+  //   <% if user_signed_in? %>
+  //     ga('qzzrTracker.set', 'dimension2', '<%= current_user.id %>');
+  //   <% else %>
+  //     ga('qzzrTracker.set', 'dimension3', '<%= get_temp_user_id %>');
+  //   <% end %>
+
+  //   <% unless @quiz %>
+  //     ga('qzzrTracker.send', 'pageview');
+  //     ga('qzzrTracker.send', 'event', 'Marketing','Entry');
+  //   <% end %>
+  // </script>
+
+<!-- Browser Update -->
+<script type="text/javascript"> 
+  var $buoop = {vs:{i:9,f:15,o:15,s:5.1,n:9}}; 
+  $buoop.ol = window.onload; 
+  window.onload=function(){ 
+    try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
+    var e = document.createElement("script"); 
+    e.setAttribute("type", "text/javascript"); 
+    e.setAttribute("src=", "//browser-update.org/update.js"); 
+    document.body.appendChild(e); 
+  } 
+</script>
+
+<!-- Typekit -->
+<script type="text/javascript" src="//use.typekit.net/ncg3ahx.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</body>
+</html>

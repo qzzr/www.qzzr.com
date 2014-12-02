@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+  <meta name="description" content="Qzzr is a simple online quiz tool that allows you to quickly create beautiful quizzes, post them anywhere on the web, view on any device, and easily track results.">
+
+  <meta property="og:title" content="Qzzr, the world's simplest quiz tool" />
+  <meta property="og:url" content="http://qzzr.co" />
+  <meta property="og:description" content="Make a quiz, send it out, track results... that’s it." />
+  <meta property="og:image" content="/assets/images/default-quiz-image.png" />
+
+  <!-- <meta name="FB_ID" content="<%= get_fb_id %>"/> -->
+
+  <!-- Hack for fackbook redirect anchor -->
+  <script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        window.location.hash = '';
+    }
+  </script>
+
+  <link rel="stylesheet" href="">
+  
+  <script src="/assets/javascripts/modernizr.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/stylesheets/application.css">
+
+  <!-- Fav and Touch Icons -->
+  <link href="assets/ico/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <link href="assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="assets/ico/apple-touch-icon-152-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
+
+</head>
+<body>
+  <!--[if lt IE 10]>You are using an outdated version of Internet Explorer.  Qzzr is not compatible with any IE version under 10. Please go to Windows Updates and install the latest version.<![endif]-->
+ <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M8HD4R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M8HD4R');</script>
+
+<div id="fb-root"></div>
+
+
+
+<nav class="nav-bar">
+  <a href="/" class='nav-bar-logo logo logo-white'>
+    QZZR
+  </a>
+  <h1 class="nav-bar-subtitle">Quizzes for you by you</h1>
+</nav>
+
+<nav class="nav-bar-marketing">
+  <section class="nav-bar-actions">
+    <div class="nav-bar-action dropdown mln is-active">
+      <a class='nav-bar-action button button-transparent mtn' <a href="#toggleShowUses">Uses</a>
+      <ul class="dropdown-menu list list-picker">
+        <li class="list-item pl3">
+          <a href="/drive-social-traffic" class='list-item-label'>
+            Drive Social Traffic
+          </a>
+        </li>
+        <li class="list-item pl3">
+          <a href="/generate-qualified-leads" class='list-item-label h8'>
+            Capture Qualified Leads
+          </a>
+        </li>
+        <li class="list-item pl3">
+          <a href="/present-targeted-offers" class='list-item-label'>
+            Present Targeted Offers
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="/pricing" class='nav-bar-action button button-transparent'>Pricing</a>
+    <a href="/about" class='nav-bar-action button button-transparent'>About</a>
+    <a href="http://blog.qzzr.com"  class='nav-bar-action button button-transparent'>Blog</a>
+  </section>
+</nav>
+
+<div class="page-wrapper">
+  <section class="hero hero-tour">
+    <section class="hero-content">
+      <h1 class="hero-heading h1">
+        Have a look under the hood
+      </h1>
+      <section class="hero-blurb">
+        <h4 class="h5">
+          Qzzr isn’t just another pretty face. Take a deeper look and you’ll find a robust tool that can deliver powerful results.
+        </h4>
+      </section>
+      <footer class="hero-cta">
+        <a href="#showSignup" class="button button-square-large button-with-sub-label button-primary">
+          <span class="button-label">Get started</span>
+          <span class="button-sub-label">It's free</span>
+        </a>
+      </footer>
+    </section>
+
+    <section class="hero-media">
+    </section>
+  </section>
+</div>
+
+<div class="page-wrapper">
+  <div class="media media-split mt5">
+
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/1.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h h3">
+        Add stunning images
+      </h3>
+      <p class="opacity-5 hyphenate">Qzzr rocks images. We automatically add those slick gradients and filters that make you look like a pro designer. Add a background image to set a theme or tell a story with question or answer options.</p>
+    </div>
+
+  </div>
+
+  <div class="media media-split media-split-flipped mt5">
+
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/2.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h h3">
+        Make it yours
+      </h3>
+      <p class="opacity-5 hyphenate">Step right up and take credit for your awesome quiz. Add your business name and logo for that brand you’ve spent so much time on. If it’s for personal use, just upload that avatar that makes you look super skinny.</p>
+    </div>
+
+  </div>
+
+  <div class="grid">
+    <hr class="rule mt7 mb6">
+
+    <div class="col-10 col-offset-1 text-center">
+      <h3 class="h h3">
+        Take it anywhere
+      </h3>
+      <p class="opacity-5 hyphenate">
+        Qzzr looks beautiful &amp; works flawlessly on any screen. Yes, even that one...
+      </p>
+    </div>
+
+    <div class="col-12">
+      <figure class="figure figure-devices">
+        <img src="/assets/images/tour/3.jpg"class="figure-image">
+      </figure>
+    </div>
+
+  </div>
+</div>
+
+<div class="page-wrapper pb6">
+  <div class="grid">
+    <div class="col-8 col-offset-2 col-wl-12 col-wl-offset-0">
+      <hr class="rule mt4 mb6">
+      <blockquote class="quote quote-big is-clickable" {{action goToAnchor "marketing.about" "#team"}}>
+        <p class="quote-blurb">
+          It’s not done until it’s simple.
+        </p>
+        <footer class="quote-footer">
+          <span class="quote-author">Bucky Flowers</span>
+          <span class="quote-author-title">Qzzr Director of Product </span>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrapper purple-bg pt4 pb4 text-center">
+  <a href="#showSignup" class="button button-square-large button-with-sub-label button-white">
+    <span class="button-label pt3" style="display: block;">Get started now</span>
+    <span class="h8-cap opacity-5 h mbn mtn">It's free</span>
+  </a>
+</div>
+
+<div class="page-wrapper">
+  <div class="media media-split mt5">
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/4.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h h3">
+        Launch an awesome viral outcome quiz
+      </h3>
+      <p class="opacity-5 hyphenate">Those quizzes... the ones you’re seeing all over your social media feed... the ones you can’t resist... you can make them with Qzzr and drive all of that traffic right back to your site or blog. Turn all of that fluff into serious results for your brand.</p>
+    </div>
+  </div>
+
+  <div class="media media-split media-split-flipped mt5">
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/5.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h h3">
+        Test your audience with a graded quiz
+      </h3>
+      <p class="opacity-5 hyphenate">Create an engaging graded quiz in minutes and share it with your audience. Use it as a training tool to provide feedback or just for fun. Either way, people taking your quiz can see their results and share it with their friends.</p>
+    </div>
+  </div>
+
+  <div class="media media-split mt5">
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/6.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h h3">
+        Mix it up with various question types
+      </h3>
+      <p class="opacity-5 hyphenate">Qzzr has a variety of question types that support your creativity. With a selection of multiple choice, multiple answer, and true/false questions all supported by images you can create a buffet of options.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrapper pt7 pb7">
+  <div class="grid">
+    <div class="col-8 col-offset-2 col-wl-12 col-wl-offset-0">
+      <blockquote class="quote quote-big is-clickable" {{action goToAnchor "marketing.about" "#team"}}>
+        <p class="quote-blurb">
+          At every turn, the experience should be remarkable.
+        </p>
+        <footer class="quote-footer">
+          <span class="quote-author">Jayden Anderson</span>
+          <span class="quote-author-title">Qzzr Director of Design</span>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="grid">
+
+    <div class="col-4 col-wm-12 mb4">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/1.jpg"class="figure-image">
+      </figure>
+      <h3 class="h4 pt4 pb2">
+        Pimp your quiz
+      </h3>
+      <p class="opacity-5 h7 hyphenate">Behind the simple interface, you’ll find all the levers you need to make your quiz get the results you desire. You can randomize questions, randomize answers, set feedback, require answer confirmation, and order questions however you wish. That’s just to name a few.</p>
+    </div>
+
+    <div class="col-4 col-wm-12 mb4">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/8.jpg"class="figure-image">
+      </figure>
+      <h3 class="h4 pt4 pb2">
+        Embed it anywhere
+      </h3>
+      <p class="opacity-5 h7 hyphenate">Qzzr is a snap to embed. Our javascript embed method renders an iframe that can be resized to match your space. Sidebars. Headers. Center stage. No problem.</p>
+    </div>
+
+    <div class="col-4 col-wm-12 mb4">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/9.jpg"class="figure-image">
+      </figure>
+      <h3 class="h4 pt4 pb2">
+        Share it with the world
+      </h3>
+      <p class="opacity-5 h7 hyphenate">Qzzr is as easy to share as sneezing. You and the people taking your quiz can instantly share your quiz or their results on Facebook, Twitter, or LinkedIn. In addition they can drop the link in a comment, on the web, on a slide deck, or in an email.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="grid">
+
+    <div class="col-8 col-offset-2 text-center">
+      <h3 class="h h3">
+        Visualize your results
+      </h3>
+      <p class="opacity-5 hyphenate">We’re crazy about data so you don’t have to be. Get real time insight on how your quiz is trending, where it’s being shared, how leads/offers answered, completion rate, scores, and a bajillion other useful stats.</p>
+    </div>
+
+    <div class="col-12 mt4">
+      <figure class="figure figure-full figure-rounded" style ="max-width: 1000px; margin: 0 auto;">
+        <img src="/assets/images/tour/analytics.jpg"class="figure-image">
+      </figure>
+    </div>
+
+  </div>
+</div>
+
+<div class="page-wrapper pb7 pt7">
+  <div class="grid">
+    <div class="col-8 col-offset-2 col-wl-12 col-wl-offset-0">
+      <blockquote class="quote quote-big is-clickable" {{action goToAnchor "marketing.about" "#team"}}>
+        <p class="quote-blurb">
+          Technology should not get in the way of the experience, but be the silent supporter.   It should feel like magic.
+        </p>
+        <footer class="quote-footer">
+          <span class="quote-author">Bart Elison</span>
+          <span class="quote-author-title">Qzzr Director of Development</span>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrapper">
+  <div class="media media-split">
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/10.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h h3">
+        Redirect shares to your site or blog
+      </h3>
+      <p class="opacity-5 hyphenate">Qzzr is awesome at recruiting new fans and followers for you. A Qzzr outcome quiz can easily have over a 65% share rate on social media. You can set your quiz up so that all of those people are driven back to your site or blog to take your quiz.</p>
+      <p>
+        <a href="/drive-social-traffic" class='link link-purple'}}Learn more</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="media media-split media-split-flipped mt5">
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/11.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h h3">
+        Capture qualified leads
+      </h3>
+      <p class="opacity-5 hyphenate">Qzzr is the world’s greatest lead gen tool. A quiz is 1) irresistible 2) insanely sharable and 3) it can allow your visitors to qualify themselves. If they opt to provide their info, you already know exactly how they answered your questions.</p>
+      <p>
+        <a href="/generate-qualified-leads" class='link link-purple'}}Learn more</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="media media-split mt5">
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="/assets/images/tour/12.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h h3">
+        Present targeted offers
+      </h3>
+      <p class="opacity-5 hyphenate">It’s nice that quiz takers can share with the world what kind of shoes they are, but what if they could be presented with an 20% off offer to buy those exact shoes right now. They can. #gamechanger</p>
+      <p>
+        <a href="/present-targeted-offers" class='link link-purple'}}Learn more</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="media media-split media-split-flipped mt5">
+    <div class="media-block">
+      <figure class="figure figure-full figure-rounded">
+        <img src="scores/3.jpg"class="figure-image">
+      </figure>
+    </div>
+
+    <div class="media-content">
+      <h3 class="h3 pb3">
+        Track scores
+      </h3>
+      <p class="opacity-5 hyphenate">And of course you can also just plain ol’ see who took your quiz and what their grade is. In fact, if you’re like most customers you’ll be wondering why you have that LMS. We agree.
+      </p>
+      <p>
+        {{#link-to 'marketing.track-quiz-scores' class='link link-purple'}}Learn more</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid pt7 pb7">
+    <div class="col-8 col-offset-2 col-wl-12 col-wl-offset-0">
+      <blockquote class="quote quote-big is-clickable" {{action goToAnchor "marketing.about" "#team"}}>
+        <p class="quote-blurb">
+          Our aim was to create the world’s simplest quiz tool. You just make a quiz, share it, and track results.  That’s it.
+        </p>
+        <footer class="quote-footer">
+          <span class="quote-author">Josh Little</span>
+          <span class="quote-author-title">Chief Quizard</span>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+ 
+  <div class="page-wrapper">
+
+  <nav class="text-center purple-bg pt4 pb4">
+    <a href="https://app.qzzr.com/account/signup" class="button button-large h6 b button-outline button-white">
+      <span class="button-label pt3" style="display: block;">Get started now</span>
+      <span class="h8-cap opacity-5 h mbn mtn">It's free</span>
+    </a>
+  </nav>
+
+  <div class="grid gray-dark-bg pb4">
+    <div class="col-10 col-offset-1 col-wxxxl-12 col-wxxxl-offset-0">
+
+      <div class="grid grid-nested">
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Overview</li>
+            <li class="list-item">
+              <a href="/" class="list-item-link">Home</a>
+            </li>
+            <li class="list-item">
+              <a href="/pricing" class='list-item-link'>Pricing</a>
+            </li>
+            <li class="list-item">
+              <a href="/about" class='list-item-link'>About</a>
+            </li>
+            <li class="list-item">
+              <a href="http://blog.qzzr.com" class="list-item-link">
+                Blog
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="/agencies" class='list-item-link'>Need a quiz made?</a>
+            </li>
+        </div>
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Use cases</li>
+            <li class="list-item">
+              <a href="/drive-social-traffic" class='list-item-link'>Drive social traffic</a>
+            </li>
+            <li class="list-item">
+              <a href="/generate-qualified-leads" class='list-item-link'>Generate qualified leads</a>
+            </li>
+            <li class="list-item">
+              <a href="/present-targeted-offers" class='list-item-link'>Present targeted offers</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">Be friendly</li>
+            <li class="list-item">
+              <a href="https://www.facebook.com/pages/QZZR/200008303516674" class="list-item-link">
+                Like us on Facebook
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="https://twitter.com/Qzzr_" class="list-item-link">
+                Follow us on Twitter
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="https://www.linkedin.com/company/qzzr" class="list-item-link">
+                Do something on Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-3 col-wxxl-6 col-ws-12">
+          <ul class="list-nav-inverted">
+            <li class="list-item-header">&copy; 2014 Qzzr</li>
+            <li class="list-item">
+              <a href="/terms" class='list-item-link'>Terms of service</a>
+            </li>
+            <li class="list-item">
+              <a href="/privacy" class='list-item-link'>Privacy policy</a>
+            </li>
+            <li class="list-item">
+              <a href="/content" class='list-item-link'>Content Guidelines</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <!-- Google Analytics -->
+  // <script>
+  //   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  //   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  //   ga('create', '<%= ENV['GOOGLE_ANALYTICS_ID'] %>', 'auto', {'name':'qzzrTracker'});
+  //   ga('qzzrTracker.require', 'displayfeatures');
+  //   ga('qzzrTracker.require', 'ecommerce', 'ecommerce.js');
+  //   ga('qzzrTracker.set', 'dimension4', '<%= @session_identifier %>');
+  //   ga('qzzrTracker.set', 'location', '<%= @unfettered_url.html_safe %>');
+    
+  //   <% if user_signed_in? %>
+  //     ga('qzzrTracker.set', 'dimension2', '<%= current_user.id %>');
+  //   <% else %>
+  //     ga('qzzrTracker.set', 'dimension3', '<%= get_temp_user_id %>');
+  //   <% end %>
+
+  //   <% unless @quiz %>
+  //     ga('qzzrTracker.send', 'pageview');
+  //     ga('qzzrTracker.send', 'event', 'Marketing','Entry');
+  //   <% end %>
+  // </script>
+
+<!-- Browser Update -->
+<script type="text/javascript"> 
+  var $buoop = {vs:{i:9,f:15,o:15,s:5.1,n:9}}; 
+  $buoop.ol = window.onload; 
+  window.onload=function(){ 
+    try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
+    var e = document.createElement("script"); 
+    e.setAttribute("type", "text/javascript"); 
+    e.setAttribute("src=", "//browser-update.org/update.js"); 
+    document.body.appendChild(e); 
+  } 
+</script>
+
+<!-- Typekit -->
+<script type="text/javascript" src="//use.typekit.net/ncg3ahx.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</body>
+</html>
