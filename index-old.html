@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
   <meta charset="utf-8">
 
   <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
@@ -24,14 +48,16 @@
         window.location.hash = '';
     }
   </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <link rel="stylesheet" href="">
+
   
   <script src="/assets/javascripts/modernizr.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/stylesheets/application.css">
 
+  <link rel='stylesheet' href='assets/stylesheets/colorbox.css'>
   <!-- Fav and Touch Icons -->
   <link href="assets/ico/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
   <link href="assets/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed" type="image/png">
@@ -59,39 +85,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <nav class="nav-bar">
-  <a href="/" class='nav-bar-logo logo logo-white'>
-    QZZR
+  <a href="https://www.qzzr.com">
+  <span class='nav-bar-logo logo logo-white'>QZZR</span>   
+  <span class="nav-bar-subtitle link-white">Quizzes for you by you</span>
   </a>
-  <h1 class="nav-bar-subtitle">Quizzes for you by you</h1>
 </nav>
 
 <nav class="nav-bar-marketing">
   <section class="nav-bar-actions">
-    <div class="nav-bar-action dropdown mln is-active">
-      <a class='nav-bar-action button button-transparent mtn' <a href="#toggleShowUses">Uses</a>
+
+    <a href="index.html" class='nav-bar-action button button-transparent'>Overview</a>
+
+    <div class="nav-bar-action dropdown mln">
+      <a class='nav-bar-action button button-transparent mtn js-dropdown-trigger' href="#toggleShowUses">Uses</a>
       <ul class="dropdown-menu list list-picker">
         <li class="list-item pl3">
-          <a href="/drive-social-traffic" class='list-item-label'>
+          <a href="drive-social-traffic/index.html" class='list-item-label'>
             Drive Social Traffic
           </a>
         </li>
         <li class="list-item pl3">
-          <a href="/generate-qualified-leads" class='list-item-label h8'>
+          <a href="generate-qualified-leads/index.html" class='list-item-label h8'>
             Capture Qualified Leads
           </a>
         </li>
         <li class="list-item pl3">
-          <a href="/present-targeted-offers" class='list-item-label'>
+          <a href="present-targeted-offers/index.html" class='list-item-label'>
             Present Targeted Offers
           </a>
         </li>
       </ul>
     </div>
-    <a href="/pricing" class='nav-bar-action button button-transparent'>Pricing</a>
-    <a href="/about" class='nav-bar-action button button-transparent'>About</a>
+    <a href="pricing/index.html" class='nav-bar-action button button-transparent'>Pricing</a>
+    <a href="about/index.html" class='nav-bar-action button button-transparent'>About</a>
     <a href="http://blog.qzzr.com"  class='nav-bar-action button button-transparent'>Blog</a>
   </section>
 </nav>
+
 
 <div class="page-wrapper">
   <section class="hero hero-home js-hero-toggle-body is-more is-less">
@@ -525,7 +555,6 @@ of awesomeness."
           </ul>
         </div>
 
-
         <div class="col-3 col-wxxl-6 col-ws-12">
           <ul class="list-nav-inverted">
             <li class="list-item-header">&copy; 2014 Qzzr</li>
@@ -544,10 +573,32 @@ of awesomeness."
 
     </div>
   </div>
+</div> 
+
+
+ <div id="showVideoModal" class='modal modal-video' style="display: none">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe src="//player.vimeo.com/video/102863517?title=0&amp;byline=0&amp;portrait=0&amp;color=9559ce&amp;autoplay=1" width="500" height="290" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        
+        <div class="text-center pt4">
+          <a href='https://app.qzzr.com/account/signup' class="button button-large button-primary h6 b">
+            <span class="button-label pt3" style="display: block;">Get started now</span>
+            <span class="h8-cap opacity-5 h mbn mtn">It's free</span>
+          </a>
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <a class="modal-close js-close-modal"><i class="icon-ss-delete"></i></a>
 </div>
 
-
+  <script src='assets/javascripts/jquery.colorbox-min.js'></script>
+  <script src='assets/javascripts/jquery.fitvids.js'></script>
   <!-- Google Analytics -->
+ 
   // <script>
   //   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -580,11 +631,26 @@ of awesomeness."
     try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
     var e = document.createElement("script"); 
     e.setAttribute("type", "text/javascript"); 
-    e.setAttribute("src=", "//browser-update.org/update.js"); 
+    e.setAttribute("src", "//browser-update.org/update.js"); 
     document.body.appendChild(e); 
   } 
 </script>
+<script>
+  $(document).ready(function(){
 
+    $('.js-dropdown-trigger').click(function(){
+      event.stopPropagation();
+      $(this).parent('.dropdown').toggleClass('is-active');
+    })
+
+    $(document).click( function(){
+      $('.dropdown').removeClass('is-active');
+    });
+
+    var modal = $('#showVideoModal');
+    $('.js-colorbox-trigger').colorbox({inline: true, href: modal, className: 'modal-backdrop'});
+})
+</script>
 <!-- Typekit -->
 <script type="text/javascript" src="//use.typekit.net/ncg3ahx.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
