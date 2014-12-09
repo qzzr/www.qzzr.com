@@ -87,19 +87,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <nav class="nav-bar">
-  <a href="https://www.qzzr.com">
-  <span class='nav-bar-logo logo logo-white'>QZZR</span>   
-  <span class="nav-bar-subtitle link-white">Quizzes for you by you</span>
+  <a href="/" class='nav-bar-logo logo logo-white'>
+    QZZR
   </a>
+  <nav class="nav-tabs nav-bar-tabs">
+  <a href="/" class="nav-link">
+    Home
+  </a>
+  <a href="/trending" class="nav-link">
+    Popular
+  </a>
+  <a href="/topics" class="nav-link">
+    Topics
+  </a>
+  <span class="dropdown dropdown-nav-overflow">
+    <a href="#" class="nav-link dropdown-trigger">
+      More
+    </a>
+    <section class="dropdown-menu">
+      <ul class="list list-picker">
+        <li class="list-item">
+          <a class="list-item-label" href="https://app.qzzr.com/pro">Qzzr for Business</a>
+        </li>
+        <li class="list-item">
+          <a class="list-item-label" href="http://blog.qzzr.com/">Blog</a>
+        </li>
+        <li class="list-item">
+          <a class="list-item-label" href="https://www.qzzr.com/topics">Help &amp; support</a>
+        </li>
+      </ul>
+    </section>
+  </span>
 </nav>
 
-<nav class="nav-bar-marketing">
-  <section class="nav-bar-actions">
+  <div class="nav-bar-actions">
+    <nav class="nav-bar-action">
+      <a class="button button-white button-outline" href="https://qzzr.com">
+        Return to Qzzr.com
+      </a>
+    </nav>
+  </div>
+</nav>
 
-    <a href="../index.html" class='nav-bar-action button button-transparent'>Overview</a>
+<div class="page-main">
 
-    <div class="nav-bar-action dropdown mln">
-      <a class='nav-bar-action button button-transparent mtn js-dropdown-trigger' href="#toggleShowUses">Uses</a>
+  <nav class="nav-bar nav-bar-marketing">
+
+    <a href="../index.html" class='nav-link'>Overview</a>
+
+    <div class="dropdown mln">
+      <a class='nav-link dropdown-trigger js-dropdown-trigger' href="#toggleShowUses">Uses</a>
       <ul class="dropdown-menu list list-picker">
         <li class="list-item pl3">
           <a href="../drive-social-traffic/index.html" class='list-item-label'>
@@ -118,12 +155,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </li>
       </ul>
     </div>
-    <a href="index.html" class='current-parent current nav-bar-action button button-transparent'>Pricing</a>
-    <a href="../about/index.html" class='nav-bar-action button button-transparent'>About</a>
-    <a href="http://blog.qzzr.com"  class='nav-bar-action button button-transparent'>Blog</a>
-  </section>
-</nav>
-
+    <a href="index.html" class='current-parent current nav-link'>Pricing</a>
+    <a href="../about/index.html" class='nav-link'>About</a>
+    <a href="http://blog.qzzr.com"  class='nav-link'>Blog</a>
+  </nav>
 
 <div class="page-wrapper">
   <section class="hero hero-pricing">
@@ -512,7 +547,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </div> 
-
+</div>
 
  <div class="modal-backdrop js-close-modal" style="display: none"></div>
 
