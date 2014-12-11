@@ -2,6 +2,29 @@
 <html>
 <head>
   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
   <meta charset="utf-8">
 
   <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
@@ -105,13 +128,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div class="page-main">
 
-  <nav class="nav-bar nav-bar-marketing">
-
-    <h1 class="h3">Quizzes for you, by you.</h1>
-    
-    
-  </nav>
-
 <div class="page-wrapper">
   <section class="hero hero-home js-hero-toggle-body is-more is-less">
     <section class="hero-content">
@@ -140,17 +156,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <section class="hero-media app-featured-quizzes">
 
-      <!-- {{#each content}}
-        {{#view Qzzr.MarketingQuizTileView content=this}}
+   
+        <a class ="view Qzzr.MarketingQuizTileView content=this">
           <header class="event-card-header">
-            <h2 class="event-card-title">{{title}}</h2>
+            <h2 class="event-card-title">Ryan Hamblin</h2>
             <div class="event-card-details">
-              <a class="event-card-author">{{ownerProfile.displayName}}</a>
+              <a class="event-card-author">Ryan</a>
             </div>
           </header>
-          <div {{bind-attr style="imageThumbStyle" class=":event-card-thumb backgroundColorClass" }}></div>
-        {{/view}}
-      {{/each}} -->
+          <div bind-attr style="imageThumbStyle" class=":event-card-thumb backgroundColorClass" ></div>
+        </a>
 
     </section>
     <figure class="hero-bg">

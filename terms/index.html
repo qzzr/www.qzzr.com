@@ -2,6 +2,29 @@
 <html>
 <head>
   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
   <meta charset="utf-8">
 
   <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
@@ -104,13 +127,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
 
 <div class="page-main">
-
-  <nav class="nav-bar nav-bar-marketing">
-
-    <h1 class="h3">Quizzes for you, by you.</h1>
-    
-    
-  </nav>
 
 <div class="page-wrapper is-formatted">
 	<div class="grid">

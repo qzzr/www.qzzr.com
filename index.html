@@ -2,6 +2,29 @@
 <html>
 <head>
   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
   <meta charset="utf-8">
 
   <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
@@ -105,18 +128,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div class="page-main">
 
-  <nav class="nav-bar nav-bar-marketing">
-
-    <h1 class="h3">Quizzes for you, by you.</h1>
-    
-    
-  </nav>
-
 <div class="page-wrapper">
   <section class="hero hero-home js-hero-toggle-body is-more is-less">
     <section class="hero-content">
-      <h1 class="hero-heading h1 purple-color">
-        We help thousands of companies grow their business in remarkable ways.
+      <h1 class="hero-heading h1">
+        Make engaging quizzes for your site or blog
       </h1>
       <section class="hero-blurb">
         <h4 class="h5">
@@ -130,12 +146,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <footer class="hero-cta">
         <a href="https://app.qzzr.com/account/signup" class="button button-large button-primary h6 b">
           <span class="button-label pt3">Get started now</span>
-          <span class="h8-cap opacity-5 h mbn mtn">It's free</span>
         </a>
         <a href="#videoModal" class="button button-large h6 b button-outline button-primary js-modal-trigger">
           Watch a video
         </a>
       </footer>
+    </section>
+    <section class="hero-media app-featured-quizzes">
+      <a class="event-card">
+        <span class="event-card-body">
+          <span class="event-card-heading single-line">
+            <span class="figure figure-avatar figure-24 mr1">
+              <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);"></span>
+            </span>
+            <span class="ellipsis quiz-thumbnail-author">
+              <span name="user">
+                <span>Matthew Hardigree</span>
+              </span>
+            </span>
+          </span>
+          <span><a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">How Well Do You Know The Mazda Miata?</a></span>
+        </span>
+        <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+        </span>
+      </a>
     </section>
     <figure class="hero-bg">
     </figure>

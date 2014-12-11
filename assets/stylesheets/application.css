@@ -6851,12 +6851,31 @@ input[type="file"] {
     line-height: 1em;
 }
 
+
 .hero-home {
     position: relative;
     text-align: center;
+    color: #fff;
+    background: #9559CE;
     overflow: hidden;
+    padding: 0 0 440px;
 }
-
+@media (max-width: 800px) {
+    .hero-home {
+        padding-bottom: 224px;
+    }
+}
+.hero-home .hero-heading {
+    color: #fff;
+}
+.hero-home .hero-heading,
+.hero-home .hero-blurb {
+    text-shadow: 0 5px 10px 0 rgba(34,36,38,.15);
+  }
+.hero-home .hero-blurb {
+    text-shadow: 0 5px 10px 0 rgba(34,36,38,.15);
+    margin-top: 1.5em;
+  }
 .hero-home .nav-main {
     -webkit-animation: 1.5s fadeIn ease;
     -moz-animation: 1.5s fadeIn ease;
