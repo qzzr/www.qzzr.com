@@ -70,6 +70,43 @@
   </script>
 
 
+  <style>
+    .dumb-center-wrapper {
+      height: 310px;
+    }
+    .dumb-center-transform {
+      position: absolute;
+      left: 50%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      -webkit-transform: translateX(-50%);
+         -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+           -o-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+    .dumb-center-wrapper .event-card {
+      text-align: left;
+      margin: 0 4px;
+      width: 240px;
+      opacity: .5;
+      display: inline-block;
+      padding-bottom: 0;
+      white-space: normal;
+    }
+    .dumb-center-wrapper .event-card.is-highlighted,
+    .dumb-center-wrapper .event-card:hover {
+      opacity: 1;
+    }
+    .dumb-center-wrapper .event-card-thumbnail {
+      position: relative;
+      padding-bottom: 56.25%;
+      display: block;
+    }
+  </style>
+
+
 </head>
 <body>
   <!--[if lt IE 10]>You are using an outdated version of Internet Explorer.  Qzzr is not compatible with any IE version under 10. Please go to Windows Updates and install the latest version.<![endif]-->
