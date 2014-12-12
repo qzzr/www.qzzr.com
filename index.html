@@ -37,6 +37,29 @@
 <html>
 <head>
   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
   <meta charset="utf-8">
 
   <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
@@ -139,7 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
 
 <div class="page-main">
-<section class="purple-bg pb3" style="color: #fff;">
+<section class="purple-bg mb4 pb3" style="color: #fff;">
   <div class="page-wrapper">
     <h1 class="text-center h1 h mtn mbn pb2 pt6">
       Make engaging quizzes for your site or blog
@@ -161,136 +184,137 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <section class="dumb-center-wrapper">
       <div class="dumb-center-transform">
+         <!-- Today Show/ are you snoozing or losing? -->
+        <span class="event-card" href="https://www.qzzr.com/user/todayshow/fi9wcm9maWxlcy8xNTM4Mg">
+          <span class="event-card-body">
+            <span class="event-card-heading single-line">
+              <span class="figure figure-avatar figure-24 mr1" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/b1ce20613111e4a24903302d61a54c/qzzr-todayAvatar.png);">
+                <span class="figure-image" >
+                </span>
+              </span>
+              <span href="https://www.qzzr.com/user/todayshow/fi9wcm9maWxlcy8xNTM4Mg"class="ellipsis quiz-thumbnail-author">
+                Today Show
+              </span>
+            </span>
+            <a class="event-card-title hyphenate" href="https://www.qzzr.com/quiz/are-you-snoozing-or-losing/fi9xdWl6emVzLzI1NjMy">
+              Are you snoozing or losing?
+            </a>
+          </span>
+          <span class="event-card-thumbnail" href="https://www.qzzr.com/quiz/are-you-snoozing-or-losing/fi9xdWl6emVzLzI1NjMy" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/98/e9c2a06a9711e4bbec8bdacc02147f/today-quiz-141111-031-copy.jpg);">
+          </span>
+        </span>
+        <!-- second Dorkly Which Nintendo Game Char -->
         <span class="event-card">
           <span class="event-card-body">
             <span class="event-card-heading single-line">
               <span class="figure figure-avatar figure-24 mr1">
-                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                <span class="figure-image" href="https://www.qzzr.com/quiz/which-nintendo-character-are-you/fi9xdWl6emVzLzIyMzE0" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/13/334490e74a11e3a8825fac60bdcea4/D.png);">
                 </span>
               </span>
               <span class="ellipsis quiz-thumbnail-author">
-                Matthew Hardigree
+                Dorkly
               </span>
             </span>
-            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
-              How Well Do You Know The Mazda Miata?
+            <a class="event-card-title hyphenate" href="https://www.qzzr.com/quiz/which-nintendo-character-are-you/fi9xdWl6emVzLzIyMzE0">
+              Which nintendo character are you?
             </a>
           </span>
-          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          <span class="event-card-thumbnail" href="https://www.qzzr.com/quiz/which-nintendo-character-are-you/fi9xdWl6emVzLzIyMzE0" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/f5/499dd046a811e49e9fe3cf68d83da3/tue.jpg);">
           </span>
         </span>
-        
+        <!-- third car throttle/gear head -->
         <span class="event-card">
           <span class="event-card-body">
             <span class="event-card-heading single-line">
               <span class="figure figure-avatar figure-24 mr1">
-                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                <span class="figure-image" href="http://www.qzzr.com/user/car-throttle/fi9wcm9maWxlcy82NjM4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/63/94d9e026f511e4be00c7cf6808cd5e/back.jpg);">
                 </span>
               </span>
               <span class="ellipsis quiz-thumbnail-author">
-                Matthew Hardigree
+                Car Throttle
               </span>
             </span>
-            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
-              How Well Do You Know The Mazda Miata?
+            <a class="event-card-title hyphenate" href="https://www.qzzr.com/quiz/are-you-a-true-gear-head/fi9xdWl6emVzLzY3Ng">
+              Are you a true gear head?
             </a>
           </span>
-          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          <span class="event-card-thumbnail" href="https://www.qzzr.com/quiz/are-you-a-true-gear-head/fi9xdWl6emVzLzY3Ng" style="background-image: url(https://s3-us-west-2.amazonaws.com/qzzr-production/quiz/676/1390178603_medium.jpg?1390178603);">
           </span>
         </span>
-        
-        <span class="event-card">
-          <span class="event-card-body">
-            <span class="event-card-heading single-line">
-              <span class="figure figure-avatar figure-24 mr1">
-                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
-                </span>
-              </span>
-              <span class="ellipsis quiz-thumbnail-author">
-                Matthew Hardigree
-              </span>
-            </span>
-            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
-              How Well Do You Know The Mazda Miata?
-            </a>
-          </span>
-          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
-          </span>
-        </span>
-        
+        <!-- fourth yahoo/which taylor swift -->
         <span class="event-card is-highlighted">
           <span class="event-card-body">
             <span class="event-card-heading single-line">
               <span class="figure figure-avatar figure-24 mr1">
-                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                <span class="figure-image" href="https://www.qzzr.com/user/nicoled84/fi9wcm9maWxlcy8xMDI2NA" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-10264.png);">
                 </span>
               </span>
               <span class="ellipsis quiz-thumbnail-author">
-                Matthew Hardigree
+                 Yahoo
               </span>
             </span>
-            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
-              How Well Do You Know The Mazda Miata?
+            <a class="event-card-title hyphenate" href="https://www.qzzr.com/quiz/which-taylor-swift-are-you-dd20bdcd-77a8-41d2-9324-5c9fef24bd6c/fi9xdWl6emVzLzI0OTY1">
+              Which Taylor Swift are you?
             </a>
           </span>
-          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          <span class="event-card-thumbnail" href="https://www.qzzr.com/quiz/which-taylor-swift-are-you-dd20bdcd-77a8-41d2-9324-5c9fef24bd6c/fi9xdWl6emVzLzI0OTY1" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/47/06fb7062da11e48b5fe92ceb7e8323/Screen-Shot-2014-11-02-at-4.50.18-PM.png);">
           </span>
         </span>
-        
+        <!-- fifth College Humor/Sci-fi author -->
         <span class="event-card">
           <span class="event-card-body">
             <span class="event-card-heading single-line">
               <span class="figure figure-avatar figure-24 mr1">
-                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                <span class="figure-image" href="https://www.qzzr.com/quiz/sci-fi-fantasy-author-or-crazy-person/fi9xdWl6emVzLzEwNTI0" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
                 </span>
               </span>
               <span class="ellipsis quiz-thumbnail-author">
-                Matthew Hardigree
+                College Humor
               </span>
             </span>
-            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
-              How Well Do You Know The Mazda Miata?
+            <a class="event-card-title hyphenate" href="https://www.qzzr.com/quiz/sci-fi-fantasy-author-or-crazy-person/fi9xdWl6emVzLzEwNTI0">
+             Sci-Fi author or crazy person?
             </a>
           </span>
-          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          <span class="event-card-thumbnail" href="https://www.qzzr.com/quiz/sci-fi-fantasy-author-or-crazy-person/fi9xdWl6emVzLzEwNTI0" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/5e/422910092d11e491808b11e17df7d4/George-RR-Martin-1930704.jpg);">
           </span>
         </span>
-        
+        <!-- sixth Crosswalk/Which bible figure are you? -->
         <span class="event-card">
           <span class="event-card-body">
             <span class="event-card-heading single-line">
               <span class="figure figure-avatar figure-24 mr1">
-                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                <span class="figure-image" href="https://www.qzzr.com/quiz/which-bible-figure-are-you/fi9xdWl6emVzLzUxNDY" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
                 </span>
               </span>
               <span class="ellipsis quiz-thumbnail-author">
-                Matthew Hardigree
+                Crosswalk.com
               </span>
             </span>
-            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
-              How Well Do You Know The Mazda Miata?
+            <a class="event-card-title hyphenate" href="https://www.qzzr.com/quiz/which-bible-figure-are-you/fi9xdWl6emVzLzUxNDY">
+              Which bible figure are you?
             </a>
           </span>
-          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          <span class="event-card-thumbnail" href="https://www.qzzr.com/quiz/which-bible-figure-are-you/fi9xdWl6emVzLzUxNDY" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/3d/56afa0cc2e11e3aa7ae798b9853100/last-supper.jpg);">
           </span>
         </span>
-        
+        <!-- seventh KSL/ Can you pass this US Citizenship Test? -->
         <span class="event-card">
           <span class="event-card-body">
             <span class="event-card-heading single-line">
               <span class="figure figure-avatar figure-24 mr1">
-                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                <span class="figure-image" href="https://www.qzzr.com/quiz/can-you-pass-the-u-s-citizenship-test/fi9xdWl6emVzLzUyMzU" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
                 </span>
               </span>
               <span class="ellipsis quiz-thumbnail-author">
-                Matthew Hardigree
+                KSL
               </span>
             </span>
-            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
-              How Well Do You Know The Mazda Miata?
+            <a class="event-card-title hyphenate" href="https://www.qzzr.com/quiz/can-you-pass-the-u-s-citizenship-test/fi9xdWl6emVzLzUyMzU">
+              Can you pass the US Citizenship?
             </a>
           </span>
-          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          <span class="event-card-thumbnail" href="https://www.qzzr.com/quiz/can-you-pass-the-u-s-citizenship-test/fi9xdWl6emVzLzUyMzU" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/40/def2f0cf1611e3a79f7f080b5dab0d/U.S.-Capital.jpg);">
           </span>
         </span>
       </div>
