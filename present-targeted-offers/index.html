@@ -87,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <nav class="nav-bar">
-  <a href="/index.html" class='nav-bar-logo logo logo-white'>
+  <a href="/" class='nav-bar-logo logo logo-white'>
     QZZR
   </a>
   <nav class="nav-tabs nav-bar-tabs">
@@ -119,8 +119,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <div class="nav-bar-actions">
     <nav class="nav-bar-action">
-      <a class="button button-white button-outline" href="https://qzzr.com">
-        Return to Qzzr.com
+      <a href="https://app.qzzr.com/new" class="button button-primary button-with-label tooltip tooltip-primary" data-tooltip="It's free">
+        <i class="icon icon-ss-compose"></i>
+        <span class="inline-block">
+          <span class="button-label wxl-none">Create a quiz</span>
+        </span>
+      </a>
+      <a class="button button-white button-outline" href="https://app.qzzr.com/account/signin">
+        Log in
       </a>
     </nav>
   </div>
@@ -402,29 +408,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
   <!-- Google Analytics -->
-  // <script>
-  //   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  //   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  //   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  //   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  //   ga('create', '<%= ENV['GOOGLE_ANALYTICS_ID'] %>', 'auto', {'name':'qzzrTracker'});
-  //   ga('qzzrTracker.require', 'displayfeatures');
-  //   ga('qzzrTracker.require', 'ecommerce', 'ecommerce.js');
-  //   ga('qzzrTracker.set', 'dimension4', '<%= @session_identifier %>');
-  //   ga('qzzrTracker.set', 'location', '<%= @unfettered_url.html_safe %>');
-    
-  //   <% if user_signed_in? %>
-  //     ga('qzzrTracker.set', 'dimension2', '<%= current_user.id %>');
-  //   <% else %>
-  //     ga('qzzrTracker.set', 'dimension3', '<%= get_temp_user_id %>');
-  //   <% end %>
-
-  //   <% unless @quiz %>
-  //     ga('qzzrTracker.send', 'pageview');
-  //     ga('qzzrTracker.send', 'event', 'Marketing','Entry');
-  //   <% end %>
-  // </script>
+    ga('create', 'UA-45882503-8', 'auto');
+    ga('send', 'pageview');
+  </script>
 
 <!-- Browser Update -->
 <script type="text/javascript"> 
