@@ -1,3 +1,38 @@
+<style>
+.dumb-center-wrapper {
+  height: 310px;
+}
+.dumb-center-transform {
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.dumb-center-wrapper .event-card {
+  text-align: left;
+  margin: 0 4px;
+  width: 240px;
+  opacity: .5;
+  display: inline-block;
+  padding-bottom: 0;
+  white-space: normal;
+}
+.dumb-center-wrapper .event-card.is-highlighted,
+.dumb-center-wrapper .event-card:hover {
+  opacity: 1;
+}
+.dumb-center-wrapper .event-card-thumbnail {
+  position: relative;
+  padding-bottom: 56.25%;
+  display: block;
+}
+</style>
 <!DOCTYPE html>
 <html>
 <head>
@@ -127,57 +162,166 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
 
 <div class="page-main">
-
-<div class="page-wrapper">
-  <section class="hero hero-home js-hero-toggle-body is-more is-less">
-    <section class="hero-content">
-      <h1 class="hero-heading h1">
-        Make engaging quizzes for your site or blog
-      </h1>
-      <section class="hero-blurb">
-        <h4 class="h5">
-          <span class="wm-block">Drive social traffic</span>
-          <span class="wm-none">&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</span>
-          <span class="wm-block">Capture leads</span>
-          <span class="wm-none">&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</span>
-          <span class="wm-block">Present offers</span>
-        </h4>
-      </section>
-      <footer class="hero-cta">
-        <a href="https://app.qzzr.com/account/signup" class="button button-large button-primary h6 b">
-          <span class="button-label pt3">Get started now</span>
-        </a>
-        <a href="#videoModal" class="button button-large h6 b button-outline button-primary js-modal-trigger">
-          Watch a video
-        </a>
-      </footer>
-    </section>
-    <section class="hero-media app-featured-quizzes">
-      <a class="event-card">
-        <span class="event-card-body">
-          <span class="event-card-heading single-line">
-            <span class="figure figure-avatar figure-24 mr1">
-              <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);"></span>
-            </span>
-            <span class="ellipsis quiz-thumbnail-author">
-              <span name="user">
-                <span>Matthew Hardigree</span>
+<section class="purple-bg pb3" style="color: #fff;">
+  <div class="page-wrapper">
+    <h1 class="text-center h1 h mtn mbn pb2 pt6">
+      Make engaging quizzes for your site or blog
+    </h1>
+    <h4 class="h5 h text-center">
+      <span class="wm-block">Drive social traffic</span>
+      <span class="wm-none">&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</span>
+      <span class="wm-block">Capture leads</span>
+      <span class="wm-none">&nbsp;&nbsp;&nbsp;&middot;&nbsp;&nbsp;&nbsp;</span>
+      <span class="wm-block">Present offers</span>
+    </h4>
+    <div class="text-center pt4 pb5">
+      <a href="https://app.qzzr.com/account/signup" style="width: 280px" class="button button-large button-primary h6 b mr2 ml2 mb2">
+        Get started now
+      </a>
+      <a href="#videoModal" style="width: 280px" class="button button-large h6 b button-outline button-white js-modal-trigger mr2 ml2 mb2">
+        Watch a video
+      </a>
+    </div>
+    <section class="dumb-center-wrapper">
+      <div class="dumb-center-transform">
+        <span class="event-card">
+          <span class="event-card-body">
+            <span class="event-card-heading single-line">
+              <span class="figure figure-avatar figure-24 mr1">
+                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                </span>
+              </span>
+              <span class="ellipsis quiz-thumbnail-author">
+                Matthew Hardigree
               </span>
             </span>
+            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
+              How Well Do You Know The Mazda Miata?
+            </a>
           </span>
-          <span><a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">How Well Do You Know The Mazda Miata?</a></span>
+          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          </span>
         </span>
-        <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+        
+        <span class="event-card">
+          <span class="event-card-body">
+            <span class="event-card-heading single-line">
+              <span class="figure figure-avatar figure-24 mr1">
+                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                </span>
+              </span>
+              <span class="ellipsis quiz-thumbnail-author">
+                Matthew Hardigree
+              </span>
+            </span>
+            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
+              How Well Do You Know The Mazda Miata?
+            </a>
+          </span>
+          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          </span>
         </span>
-      </a>
+        
+        <span class="event-card">
+          <span class="event-card-body">
+            <span class="event-card-heading single-line">
+              <span class="figure figure-avatar figure-24 mr1">
+                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                </span>
+              </span>
+              <span class="ellipsis quiz-thumbnail-author">
+                Matthew Hardigree
+              </span>
+            </span>
+            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
+              How Well Do You Know The Mazda Miata?
+            </a>
+          </span>
+          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          </span>
+        </span>
+        
+        <span class="event-card is-highlighted">
+          <span class="event-card-body">
+            <span class="event-card-heading single-line">
+              <span class="figure figure-avatar figure-24 mr1">
+                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                </span>
+              </span>
+              <span class="ellipsis quiz-thumbnail-author">
+                Matthew Hardigree
+              </span>
+            </span>
+            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
+              How Well Do You Know The Mazda Miata?
+            </a>
+          </span>
+          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          </span>
+        </span>
+        
+        <span class="event-card">
+          <span class="event-card-body">
+            <span class="event-card-heading single-line">
+              <span class="figure figure-avatar figure-24 mr1">
+                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                </span>
+              </span>
+              <span class="ellipsis quiz-thumbnail-author">
+                Matthew Hardigree
+              </span>
+            </span>
+            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
+              How Well Do You Know The Mazda Miata?
+            </a>
+          </span>
+          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          </span>
+        </span>
+        
+        <span class="event-card">
+          <span class="event-card-body">
+            <span class="event-card-heading single-line">
+              <span class="figure figure-avatar figure-24 mr1">
+                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                </span>
+              </span>
+              <span class="ellipsis quiz-thumbnail-author">
+                Matthew Hardigree
+              </span>
+            </span>
+            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
+              How Well Do You Know The Mazda Miata?
+            </a>
+          </span>
+          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          </span>
+        </span>
+        
+        <span class="event-card">
+          <span class="event-card-body">
+            <span class="event-card-heading single-line">
+              <span class="figure figure-avatar figure-24 mr1">
+                <span class="figure-image" href="user/jalopnikmatt/fi9wcm9maWxlcy8xOTYwNg" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
+                </span>
+              </span>
+              <span class="ellipsis quiz-thumbnail-author">
+                Matthew Hardigree
+              </span>
+            </span>
+            <a class="event-card-title hyphenate" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4">
+              How Well Do You Know The Mazda Miata?
+            </a>
+          </span>
+          <span class="event-card-thumbnail" href="quiz/how-well-do-you-know-the-mazda-miata/fi9xdWl6emVzLzI4MTI4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/82/6cbd707b1d11e49b71df69bd29cd34/2016_GlobalMX-5_28.jpg);">
+          </span>
+        </span>
+      </div>
     </section>
-    <figure class="hero-bg">
-    </figure>
-  </section>
-</div>
+  </div>
+</section>
 
 <div class="page-wrapper">
-  <hr class="rule mtn mb5">
 
   <div class="grid h6 text-center">
     <div class="col-4 col-offset-1 col-wxl-6 col-wxl-offset-0 col-wl-12">
