@@ -4060,9 +4060,10 @@ a:hover {
 }
 
 .box-pricing {
-    border: 2px solid #cbcfd6;
-    border-radius: 2px;
-    padding-bottom: 3em;
+  border: 2px solid #cbcfd6;
+  border-radius: 2px;
+  padding-bottom: 3em;
+  color: #222426;
 }
 
 .box-pricing .per-month {
@@ -4110,7 +4111,6 @@ a:hover {
 }
 
 .box-pricing .box-body {
-    color: rgba(34, 36, 38, 0.5);
     list-style: none;
     padding: 12px;
     font-size: 16px;
