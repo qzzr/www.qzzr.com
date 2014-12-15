@@ -189,7 +189,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <div class="grid pb5">
 
-    <section class="col-3 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
+    <script type="text/javascript">
+  var monthlyShowing = false;
+  function toggleMonthly () {
+    var pro = window.document.getElementById('pro-pricing');
+    if (monthlyShowing) {
+      pro.className = pro.className.replace('show-monthly', '');
+      monthlyShowing = false;
+    } else {
+      pro.className = [pro.className, 'show-monthly'].join(' ');
+      monthlyShowing = true;
+    }
+  }
+</script>
+
+<section class="col-3 col-offset-1 col-wxxl-offset-0 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
   <article class="box box-pricing box-enterprise">
     <header class="box-header">
       <h3 class="box-header-heading h4">
@@ -214,36 +228,66 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </article>
 </section>
 
-<section class="col-3 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
-  <article class="box box-pricing box-enterprise">
-    <header class="box-header">
-      <h3 class="box-header-heading h4">
-        Pro
-      </h3>
-      <strong class="b">$299/year</strong>
-      <h6 class="box-header-subheading">for marketers, small biz, and e-commerce</h6>
-    </header>
-    <section class="box-body">
-      All the goodness of Basic
-      <ul>
-        <li class="list-item">Unlimited leads</li>
-        <li class="list-item">Unlimited Faceboox likes</li>
-        <li class="list-item">Unlimited offer links</li>
-        <li class="list-item">Add your own lead form</li>
-        <li class="list-item">Export leads and data</li>
-        <li class="list-item">Reduced Qzzr branding</li>
-        <li class="list-item">Customize share text</li>
-        <li class="list-item">Customized CTA's</li>
-        <li class="list-item">Unlisted quizzes</li>
-      </ul>
-    </section>
-    <footer class="box-footer">
-        <a href="http://app.qzzr.com/account/signup_pro/58" class="button">Get started</a>
-    </footer>
+<section class="col-4 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
+  <article id="pro-pricing" class="box box-pricing box-enterprise">
+    <div class="per-year">
+      <header class="box-header">
+        <h3 class="box-header-heading h4">
+          Pro
+        </h3>
+        <strong class="b">$299/year</strong>
+        <span class="float-right link opacity-6 toggle" onclick="toggleMonthly()">Show Monthly</span>
+        <h6 class="box-header-subheading">for marketers, small biz, and e-commerce</h6>
+      </header>
+      <section class="box-body">
+        All the goodness of Basic
+        <ul>
+          <li class="list-item">Unlimited leads</li>
+          <li class="list-item">Unlimited Faceboox likes</li>
+          <li class="list-item">Unlimited offer links</li>
+          <li class="list-item">Add your own lead form</li>
+          <li class="list-item">Export leads and data</li>
+          <li class="list-item">Reduced Qzzr branding</li>
+          <li class="list-item">Customize share text</li>
+          <li class="list-item">Customized CTA's</li>
+          <li class="list-item">Unlisted quizzes</li>
+        </ul>
+      </section>
+      <footer class="box-footer">
+          <a href="http://app.qzzr.com/account/signup_pro/58" class="button">Get started</a>
+      </footer>
+    </div>
+    <div class="per-month">
+      <header class="box-header">
+        <h3 class="box-header-heading h4">
+          Pro
+        </h3>
+        <strong class="b">$49/month</strong>
+        <span class="float-right link opacity-6 toggle" onclick="toggleMonthly()">Show Yearly</span>
+        <h6 class="box-header-subheading">for marketers, small biz, and e-commerce</h6>
+      </header>
+      <section class="box-body">
+        All the goodness of Basic
+        <ul>
+          <li class="list-item">Unlimited leads</li>
+          <li class="list-item">Unlimited Faceboox likes</li>
+          <li class="list-item">Unlimited offer links</li>
+          <li class="list-item">Add your own lead form</li>
+          <li class="list-item">Export leads and data</li>
+          <li class="list-item">Reduced Qzzr branding</li>
+          <li class="list-item">Customize share text</li>
+          <li class="list-item">Customized CTA's</li>
+          <li class="list-item">Unlisted quizzes</li>
+        </ul>
+      </section>
+      <footer class="box-footer">
+          <a href="http://app.qzzr.com/account/signup_pro/59" class="button">Get started</a>
+      </footer>
+    </div>
   </article> 
 </section>
 
-<section class="col-3 col-wxxl-6 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
+<section class="col-3 col-wxxl-6 col-wxxl-offset-3 col-wm-10 col-wm-offset-1 col-ws-12 col-ws-offset-0 mb4">
   <article class="box box-pricing box-enterprise">
     <header class="box-header">
       <h3 class="box-header-heading h4">
