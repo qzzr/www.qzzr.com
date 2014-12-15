@@ -2,29 +2,6 @@
 <html>
 <head>
   
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
-  
   <meta charset="utf-8">
 
   <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
@@ -217,12 +194,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <span class="event-card-body">
             <span class="event-card-heading single-line">
               <span class="figure figure-avatar figure-24 mr1">
-                <a class="figure-image" href="/quiz/which-nintendo-character-are-you/fi9xdWl6emVzLzIyMzE0" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/13/334490e74a11e3a8825fac60bdcea4/D.png);">
+                <a class="figure-image" href="/user/dorkly/fi9wcm9maWxlcy8xNTg1" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/13/334490e74a11e3a8825fac60bdcea4/D.png);">
                 </a>
               </span>
-              <span class="ellipsis quiz-thumbnail-author">
+              <a name="user"href="/user/dorkly/fi9wcm9maWxlcy8xNTg1" class="ellipsis quiz-thumbnail-author">
                 Dorkly
-              </span>
+              </a>
             </span>
             <a class="event-card-title hyphenate" href="/quiz/which-nintendo-character-are-you/fi9xdWl6emVzLzIyMzE0">
               Which nintendo character are you?
@@ -239,9 +216,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a class="figure-image" href="/user/car-throttle/fi9wcm9maWxlcy82NjM4" style="background-image: url(https://d27v936kxrwe69.cloudfront.net/transloadit/63/94d9e026f511e4be00c7cf6808cd5e/back.jpg);">
                 </a>
               </span>
-              <span class="ellipsis quiz-thumbnail-author">
+              <a name="user"href="/user/car-throttle/fi9wcm9maWxlcy82NjM41" class="ellipsis quiz-thumbnail-author">
                 Car Throttle
-              </span>
+              </a>
             </span>
             <a class="event-card-title hyphenate" href="/quiz/are-you-a-true-gear-head/fi9xdWl6emVzLzY3Ng">
               Are you a true gear head?
@@ -258,9 +235,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a class="figure-image" href="/user/nicoled84/fi9wcm9maWxlcy8xMDI2NA" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-10264.png);">
                 </a>
               </span>
-              <span class="ellipsis quiz-thumbnail-author">
-                 Yahoo
-              </span>
+              <a name="user"href="/user/nicoled84/fi9wcm9maWxlcy8xMDI2NA" class="ellipsis quiz-thumbnail-author">
+                 Yahoo!
+              </a>
             </span>
             <a class="event-card-title hyphenate" href="/quiz/which-taylor-swift-are-you-dd20bdcd-77a8-41d2-9324-5c9fef24bd6c/fi9xdWl6emVzLzI0OTY1">
               Which Taylor Swift are you?
@@ -277,9 +254,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a class="figure-image" href="/quiz/sci-fi-fantasy-author-or-crazy-person/fi9xdWl6emVzLzEwNTI0" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
                 </a>
               </span>
-              <span class="ellipsis quiz-thumbnail-author">
+              <a name="user"href="/user/college-humor/fi9wcm9maWxlcy8xMDMw" class="ellipsis quiz-thumbnail-author">
                 College Humor
-              </span>
+              </a>
             </span>
             <a class="event-card-title hyphenate" href="/quiz/sci-fi-fantasy-author-or-crazy-person/fi9xdWl6emVzLzEwNTI0">
              Sci-Fi author or crazy person?
@@ -296,9 +273,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a class="figure-image" href="/quiz/which-bible-figure-are-you/fi9xdWl6emVzLzUxNDY" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
                 </a>
               </span>
-              <span class="ellipsis quiz-thumbnail-author">
+              <a name="user"href="/user/crosswalk-com/fi9wcm9maWxlcy81MjA" class="ellipsis quiz-thumbnail-author">
                 Crosswalk.com
-              </span>
+              </a>
             </span>
             <a class="event-card-title hyphenate" href="/quiz/which-bible-figure-are-you/fi9xdWl6emVzLzUxNDY">
               Which bible figure are you?
@@ -315,9 +292,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a class="figure-image" href="/quiz/can-you-pass-the-u-s-citizenship-test/fi9xdWl6emVzLzUyMzU" style="background-image: url(https://d2dc3vxsq2sloe.cloudfront.net/v1-19606.png);">
                 </a>
               </span>
-              <span class="ellipsis quiz-thumbnail-author">
+              <a name="user"href="/user/jfur/fi9wcm9maWxlcy8yNzA" class="ellipsis quiz-thumbnail-author">
                 KSL
-              </span>
+              </a>
             </span>
             <a class="event-card-title hyphenate" href="/quiz/can-you-pass-the-u-s-citizenship-test/fi9xdWl6emVzLzUyMzU">
               Can you pass the US Citizenship?

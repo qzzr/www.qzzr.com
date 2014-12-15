@@ -2,29 +2,6 @@
 <html>
 <head>
   
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
-  
   <meta charset="utf-8">
 
   <title>Create Beautiful Quizzes: Free Online Quiz Maker - Qzzr</title>
@@ -227,7 +204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       All the goodness of Basic
       <ul>
         <li class="list-item">Unlimited leads</li>
-        <li class="list-item">Unlimited Faceboox likes</li>
+        <li class="list-item">Unlimited Facebook likes</li>
         <li class="list-item">Unlimited offer links</li>
         <li class="list-item">Add your own lead form</li>
         <li class="list-item">Export leads and data</li>
