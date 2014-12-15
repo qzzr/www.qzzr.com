@@ -6202,6 +6202,8 @@ input[type="file"] {
 
 .figure-avatar .figure-image {
     border-radius: 1000px;
+    height: 24px;
+    float: left;
 }
 
 .figure-avatar .figure-caption {
@@ -9086,6 +9088,10 @@ abbr[title], dfn[title] {
 
 .event-card-heading a:hover {
     color: #9559ce;
+}
+
+.event-card-heading .quiz-thumbnail-author {
+    margin-left: 0.5em;
 }
 
 .event-card-comment {
@@ -13305,7 +13311,7 @@ html, body {
     background: #fff;
 }
 
-.results-details .event-card {
+.dumb-center-transform, .results-details .event-card {
     width: 100%;
 }
 
