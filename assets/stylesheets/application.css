@@ -10287,8 +10287,8 @@ a.inverted.is-disabled:hover,
 
 @font-face {
     font-family: "SSGeomiconsSquared";
-    src: url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.eot);
-    src: url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.eot?#iefix) format("embedded-opentype"), url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.woff) format("woff"), url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.ttf) format("truetype"), url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.svg#SSGeomiconsSquared) format("svg");
+    src: url(/assets/fonts/ss-geomicons-squared.eot);
+    src: url(/assets/fonts/ss-geomicons-squared.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/ss-geomicons-squared.woff) format("woff"), url(/assets/fonts/ss-geomicons-squared.ttf) format("truetype"), url(/assets/fonts/ss-geomicons-squared.svg#SSGeomiconsSquared) format("svg");
     font-weight: 400;
     font-style: normal;
 }
