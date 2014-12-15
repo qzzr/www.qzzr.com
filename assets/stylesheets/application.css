@@ -6202,6 +6202,8 @@ input[type="file"] {
 
 .figure-avatar .figure-image {
     border-radius: 1000px;
+    height: 24px;
+    float: left;
 }
 
 .figure-avatar .figure-caption {
@@ -9088,6 +9090,10 @@ abbr[title], dfn[title] {
     color: #9559ce;
 }
 
+.event-card-heading .quiz-thumbnail-author {
+    margin-left: 0.5em;
+}
+
 .event-card-comment {
     font-size: 14px;
 }
@@ -10351,8 +10357,8 @@ a.inverted.is-disabled:hover,
 
 @font-face {
     font-family: "SSGeomiconsSquared";
-    src: url(/assets/ss-geomicons-squared.eot);
-    src: url(/assets/ss-geomicons-squared.eot?#iefix) format("embedded-opentype"), url(/assets/ss-geomicons-squared.woff) format("woff"), url(/assets/ss-geomicons-squared.ttf) format("truetype"), url(/assets/ss-geomicons-squared.svg#SSGeomiconsSquared) format("svg");
+    src: url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.eot);
+    src: url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.eot?#iefix) format("embedded-opentype"), url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.woff) format("woff"), url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.ttf) format("truetype"), url(//d128nd0hn9abx3.cloudfront.net/assets/ss-geomicons-squared.svg#SSGeomiconsSquared) format("svg");
     font-weight: 400;
     font-style: normal;
 }
@@ -13305,7 +13311,7 @@ html, body {
     background: #fff;
 }
 
-.results-details .event-card {
+.dumb-center-transform, .results-details .event-card {
     width: 100%;
 }
 
