@@ -3984,119 +3984,119 @@ a:hover {
 
 @-webkit-keyframes bouncing {
     0% {
-        -webkit-transform: translateY(0%);
+        -webkit-transform: translate(-50%, 0%);
     }
 
     15% {
-        -webkit-transform: translateY(-7%);
+        -webkit-transform: translate(-50%, -7%);
     }
 
     30% {
-        -webkit-transform: translateY(0%);
+        -webkit-transform: translate(-50%, 0%);
     }
 
     45% {
-        -webkit-transform: translateY(-3.5%);
+        -webkit-transform: translate(-50%, -3.5%);
     }
 
     60% {
-        -webkit-transform: translateY(0%);
+        -webkit-transform: translate(-50%, 0%);
     }
 
     75% {
-        -webkit-transform: translateY(-1%);
+        -webkit-transform: translate(-50%, -1%);
     }
 
     100% {
-        -webkit-transform: translateY(0%);
+        -webkit-transform: translate(-50%, 0%);
     }
 }
 
 @-moz-keyframes bouncing {
     0% {
-        -moz-transform: translateY(0%);
+        -moz-transform: translate(-50%, 0%);
     }
 
     15% {
-        -moz-transform: translateY(-7%);
+        -moz-transform: translate(-50%, -7%);
     }
 
     30% {
-        -moz-transform: translateY(0%);
+        -moz-transform: translate(-50%, 0%);
     }
 
     45% {
-        -moz-transform: translateY(-3.5%);
+        -moz-transform: translate(-50%, -3.5%);
     }
 
     60% {
-        -moz-transform: translateY(0%);
+        -moz-transform: translate(-50%, 0%);
     }
 
     75% {
-        -moz-transform: translateY(-1%);
+        -moz-transform: translate(-50%, -1%);
     }
 
     100% {
-        -moz-transform: translateY(0%);
+        -moz-transform: translate(-50%, 0%);
     }
 }
 
 @keyframes bouncing {
     0% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        -o-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -o-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
     }
 
     15% {
-        -webkit-transform: translateY(-7%);
-        -moz-transform: translateY(-7%);
-        -ms-transform: translateY(-7%);
-        -o-transform: translateY(-7%);
-        transform: translateY(-7%);
+        -webkit-transform: translate(-50%, -7%);
+        -moz-transform: translate(-50%, -7%);
+        -ms-transform: translate(-50%, -7%);
+        -o-transform: translate(-50%, -7%);
+        transform: translate(-50%, -7%);
     }
 
     30% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        -o-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -o-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
     }
 
     45% {
-        -webkit-transform: translateY(-3.5%);
-        -moz-transform: translateY(-3.5%);
-        -ms-transform: translateY(-3.5%);
-        -o-transform: translateY(-3.5%);
-        transform: translateY(-3.5%);
+        -webkit-transform: translate(-50%, -3.5%);
+        -moz-transform: translate(-50%, -3.5%);
+        -ms-transform: translate(-50%, -3.5%);
+        -o-transform: translate(-50%, -3.5%);
+        transform: translate(-50%, -3.5%);
     }
 
     60% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        -o-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -o-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
     }
 
     75% {
-        -webkit-transform: translateY(-1%);
-        -moz-transform: translateY(-1%);
-        -ms-transform: translateY(-1%);
-        -o-transform: translateY(-1%);
-        transform: translateY(-1%);
+        -webkit-transform: translate(-50%, -1%);
+        -moz-transform: translate(-50%, -1%);
+        -ms-transform: translate(-50%, -1%);
+        -o-transform: translate(-50%, -1%);
+        transform: translate(-50%, -1%);
     }
 
     100% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        -o-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -o-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
     }
 }
 
@@ -13737,6 +13737,14 @@ html, body {
     -moz-transition: 0.3s ease;
     transition: 0.3s ease;
     font-weight: normal !important;
+    top: 120%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    display: block;
 }
 
 .tooltip:hover:before, .tooltip:hover:after, .tooltip:focus:before, .tooltip:focus:after, [data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after {
@@ -13763,6 +13771,26 @@ html, body {
     text-transform: none !important;
     white-space: nowrap;
     border-radius: 2px;
+}
+
+.tooltip.tooltip-primary:after {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    height: auto;
+    width: auto;
+    background: #52c291;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-weight: bold !important;
+    line-height: 24px !important;
+    padding: 0 0.8em;
+    -webkit-animation: bouncing 6s linear infinite;
+    -moz-animation: bouncing 6s linear infinite;
+    -o-animation: bouncing 6s linear infinite;
+    -ms-animation: bouncing 6s linear infinite;
+    animation: bouncing 6s linear infinite;
+    z-index: 1;
 }
 
 .tooltip-top:before {
