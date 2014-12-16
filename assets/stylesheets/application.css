@@ -13241,7 +13241,12 @@ html, body {
     background: #fff;
 }
 
-.dumb-center-transform, .results-details .event-card {
+.dumb-center-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.results-details .event-card {
     width: 100%;
 }
 
