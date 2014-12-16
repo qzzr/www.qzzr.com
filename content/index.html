@@ -187,7 +187,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 
- 
+
   <div class="page-wrapper">
 
   <nav class="text-center purple-bg pt4 pb4">
@@ -299,7 +299,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <a class="modal-close js-close-modal"><i class="icon-ss-delete"></i></a>
 </div>
-  
+
   <script src='../assets/javascripts/jquery.fancybox.js'></script>
   <script src='../assets/javascripts/jquery.fitvids.js'></script>
 
@@ -325,10 +325,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     e.setAttribute("type", "text/javascript"); 
     e.setAttribute("src", "//browser-update.org/update.js"); 
     document.body.appendChild(e); 
-  } 
+  }
 </script>
 <script>
   $(document).ready(function(){
+    var $body = $('body'),
+      $adModal = $('#videoModal, .modal-backdrop');
 
     $('.js-dropdown-trigger').click(function(){
       event.stopPropagation();
@@ -340,16 +342,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
 
     $('.js-modal-trigger').click(function(){
-      $('#videoModal, .modal-backdrop').show();
+      $body.append($adModal);
+      $adModal.show();
+      return false;
     });
 
     $('.js-close-modal').click(function(){
-      $('#videoModal, .modal-backdrop').hide();
+      $adModal.hide();
+      $adModal.detach();
+      return false;
     });
 
     $('#videoModal').fitVids();
-
-})
+  });
 </script>
 
 <!-- Typekit -->
