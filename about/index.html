@@ -49,6 +49,8 @@
   <style>
     .dumb-center-wrapper {
       height: 310px;
+      position: relative;
+      overflow: hidden;
     }
     .dumb-center-transform {
       position: absolute;
@@ -786,11 +788,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 
- 
+
   <div class="page-wrapper">
 
   <nav class="text-center purple-bg pt4 pb4">
-    <a href="https://app.qzzr.com/account/signup" class="button button-large h6 b button-outline button-white">
+    <a href="/pricing/" class="button button-large h6 b button-outline button-white">
       <span class="button-label pt3" style="display: block;">Get started now</span>
       <span class="h8-cap opacity-5 h mbn mtn">It's free</span>
     </a>
@@ -887,7 +889,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <iframe src="//player.vimeo.com/video/102863517?title=0&amp;byline=0&amp;portrait=0&amp;color=9559ce&amp;autoplay=0" width="500" height="290" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         
         <div class="text-center pt4">
-          <a href='https://app.qzzr.com/account/signup' class="button button-large button-primary h6 b">
+          <a href='/pricing/' class="button button-large button-primary h6 b">
             <span class="button-label pt3" style="display: block;">Get started now</span>
             <span class="h8-cap opacity-5 h mbn mtn">It's free</span>
           </a>
@@ -898,7 +900,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <a class="modal-close js-close-modal"><i class="icon-ss-delete"></i></a>
 </div>
-  
+
   <script src='../assets/javascripts/jquery.fancybox.js'></script>
   <script src='../assets/javascripts/jquery.fitvids.js'></script>
 
@@ -924,10 +926,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     e.setAttribute("type", "text/javascript"); 
     e.setAttribute("src", "//browser-update.org/update.js"); 
     document.body.appendChild(e); 
-  } 
+  }
 </script>
 <script>
   $(document).ready(function(){
+    var $body = $('body'),
+      $adModal = $('#videoModal, .modal-backdrop');
 
     $('.js-dropdown-trigger').click(function(){
       event.stopPropagation();
@@ -939,16 +943,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
 
     $('.js-modal-trigger').click(function(){
-      $('#videoModal, .modal-backdrop').show();
+      $body.append($adModal);
+      $adModal.show();
+      return false;
     });
 
     $('.js-close-modal').click(function(){
-      $('#videoModal, .modal-backdrop').hide();
+      $adModal.hide();
+      $adModal.detach();
+      return false;
     });
 
     $('#videoModal').fitVids();
-
-})
+  });
 </script>
 
 <!-- Typekit -->
