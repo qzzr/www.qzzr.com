@@ -8268,7 +8268,6 @@ input[type="file"] {
 
 @media screen and (max-height: 605px) {
     .nav-bar {
-        height: 54px;
         line-height: 54px;
         padding: 0 8px;
     }
@@ -8347,12 +8346,6 @@ input[type="file"] {
         line-height: 36px;
         height: 36px;
         display: inline-block;
-    }
-}
-
-@media screen and (max-height: 605px) {
-    .nav-bar-tabs {
-        top: 54px;
     }
 }
 
