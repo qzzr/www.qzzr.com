@@ -782,7 +782,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     var $body = $('body'),
       $adModal = $('#videoModal, .modal-backdrop');
 
-    $('.js-dropdown-trigger').click(function(){
+    $('.js-dropdown-trigger').click(function(event){
       event.stopPropagation();
       $(this).parent('.dropdown').toggleClass('is-active');
     })
