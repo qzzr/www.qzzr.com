@@ -1,4 +1,0 @@
-#!/bin/sh
-git remote add staging git@github.com:movementventures/staging.qzzr.com.git
-git remote add prod git@github.com:movementventures/www.qzzr.com.git
-git remote -v
