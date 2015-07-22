@@ -1,0 +1,63 @@
+body
+  background-color = __.color.black
+  color  = __.color.white
+  
+body, html
+  height 100%
+
+.logo
+  max-width 600px
+  margin 1.5rem
+
+.content-container
+  align-items center
+  display flex
+  flex-direction column
+  height 100%
+  justify-content center
+  margin 0
+  padding 1.5rem
+
+.subtitle
+  %ui-kit/skins/heading/index.ess
+  %ui-kit/skins/heading/h3.ess
+  color = __.color.royal
+  margin-bottom 3rem
+  
+.form-title
+  %ui-kit/skins/heading/index.ess
+  %ui-kit/skins/heading/h4.ess
+  font-weight bold
+  margin-bottom 18px
+
+.mc_embed_signup
+  width 100%
+  max-width 360px
+
+.item
+  %ui-kit/skins/item/index.ess
+  %ui-kit/skins/item/size/large.ess 
+  %ui-kit/skins/item/color/dark.ess 
+  %ui-kit/skins/item/border/no-bottom-border.ess 
+  margin-bottom 1rem 
+  width 100%
+  box-sizing border-box
+
+div.mce_inline_error,
+#mce-success-response
+  %ui-kit/skins/alert/index.ess
+  %ui-kit/skins/alert/error-form.ess
+  line-height 1.5em
+  padding 10px 18px 11px
+  margin-bottom 1rem 
+
+#mce-success-response
+  %ui-kit/skins/alert/success.ess
+
+.button-sharp
+  %ui-kit/skins/button/index.ess
+  %ui-kit/skins/button/color/royal.ess 
+  %ui-kit/skins/button/corners/sharp.ess 
+  %ui-kit/skins/button/size/large.ess 
+  %ui-kit/skins/button/fill/fill.ess 
+  width 100%

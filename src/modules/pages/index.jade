@@ -1,0 +1,27 @@
+extends ../layouts/default.jade
+
+block locals
+  - locals.title = 'Boombox.com';
+  - locals.description = 'This is a really, really, really cool site';
+
+block main
+  .content-container
+    img.logo(src="https://github.com/movementventures/branding/blob/master/boombox/logo-light.png?raw=true")
+    h3.subtitle Engage Your Audience
+    h4.form-title Sign me up for updates
+    .mc_embed_signup
+      form(action="//qzzr.us3.list-manage.com/subscribe/post?u=1152cf7882d960d3964c49670&amp;id=29261fe57f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+        .mc_embed_signup_scroll
+            .mc-field-group
+              section.item.is-input
+                .item-content
+                  input.item-input(type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="example@email.com")
+                  label.item-label(for="mce-EMAIL") Email address
+            .response(id="mce-error-response" style="display:none")
+            .response(id="mce-success-response" style="display:none")
+          div(style="position: absolute; left: -5000px;")
+            input(type="text" name="b_1152cf7882d960d3964c49670_29261fe57f" tabindex="-1" value="")
+          input.button-sharp(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button")
+      script(type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+      script(type='text/javascript').
+        (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);

@@ -1,0 +1,23 @@
+doctype html
+html
+  block locals
+  head
+    block head
+    title= locals.title || 'Qzzr'
+    meta(name='description' content=locals.description)
+
+    link(rel='stylesheet' href='/main.min.css')
+    script
+      include ../includes/mixpanel.js
+
+    script.
+      window.location.hostname == 'www.qzzr.com' ?
+        mixpanel.init("!{locals.mixpanel_token_prod}") :
+        mixpanel.init("!{locals.mixpanel_token_staging}");
+  body
+    img(src="https://api.movementventures.com/_uid.gif" width="0" height="0" style="display:none;visibility:hidden")
+    include ../includes/google-tag-manager.html
+
+    block main
+
+    script(src='/main.min.js')
