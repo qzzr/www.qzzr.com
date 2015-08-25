@@ -9148,43 +9148,64 @@ select:focus {
 
 
 /*custom css*/
-
-.team-bg {
-  margin-top: 72px;
-  padding-top: 108px;
-  height: 720px;
-  background: url('/wp-content/uploads/2015/08/about/team.jpg') no-repeat;
-  background-size: cover;
-  /*position: relative;*/
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
+  width: 100%;
 }
 
-.team-bg:before {
+.hero-bg-image {
+  width: 100%;
+}
+
+.team-bg {
+  background: url('/wp-content/uploads/2015/08/about/team.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-top: 72px;
+  padding-top: 108px;
+  position: relative;
+  padding-bottom: 108px;
+}
+
+.team-bg-image {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+.team-bg:after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(top bottom right,#002f4b,#dc4225);
-  /*opacity: .6; */
+  background-image: linear-gradient(#002f4b,#dc4225);
+  opacity: .6; 
+  display: block;
+  z-index: 0;
 }
 
 .team-h2 {
-  padding: 1.333rem;
-  position: relative;
-  z-index: 1;
   display: block;
-  line-height: 1.2em;
-  margin: auto;
   font-size: 48px;
   font-weight: 300;
   letter-spacing: -0.02em;
-  text-rendering: optimizeLegibility;
+  line-height: 1.2em;
+  margin: auto;
   max-width: 1000px;
-  width: 100%;
+  padding: 1.333rem;
   text-align: center;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
+
 
 .team-h3 {
   position: absolute;
@@ -9199,7 +9220,6 @@ select:focus {
   border-top: 1px solid rgba(255,255,255,.5);
   font-size: 2rem;
   line-height: 1em;
-  font-weight: 300;
   text-align: center;
 }
 
@@ -9214,7 +9234,10 @@ select:focus {
   max-width: 672px;
   margin: 2rem auto;
   padding: 0px 1rem;
-  text-align: left;
+  text-align: justify;
+  word-spacing: -1px;
+  position:  relative;
+  z-index: 1;
 }
 
 .weight-bold {
