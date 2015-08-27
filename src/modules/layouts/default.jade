@@ -1,0 +1,196 @@
+doctype html
+html
+  block locals
+  head
+    block head
+    title= locals.title || 'Free Online Quiz Tool - Easily Create Online Quizzes | Qzzr'
+    meta(name='description' content=locals.description)
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Qzzr is a simple online quiz tool that allows you to quickly create beautiful quizzes, post them anywhere on the web, view on any device, and track results.')
+    meta(property='og:locale', content='en_US')
+    meta(property='og:type', content='website')
+    meta(property='og:title', content='Free Online Quiz Tool - Easily Create Online Quizzes | Qzzr')
+    meta(property='og:description', content='Qzzr is a simple online quiz tool that allows you to quickly create beautiful quizzes, post them anywhere on the web, view on any device, and track results.')
+    meta(property='og:url', content='https://www.qzzr.com')
+    meta(property='og:site_name', content='Qzzr')
+    meta(property='og:image', content='https://www.qzzr.com/wp-content/uploads/2015/01/Bottom-video-screencap-1.png')
+    meta(name='google-site-verification', content='ZMj4i24AOoNsVZYad_GgEDv-Y6EXqvLGNUiisj6yQkM')
+
+    link(rel='canonical', href='https://www.qzzr.com')
+
+    link(rel='stylesheet', href='style.css', type='text/css', media='all')
+    link(rel='stylesheet' href='/main.min.css')
+
+    script
+      include ../includes/google-analytics.js
+    script
+      include ../includes/mixpanel.js
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+
+    script(src='https://use.typekit.net/fec3qwz.js')
+    script.
+      try{Typekit.load();}catch(e){}
+
+    script.
+      window.location.hostname == 'www.qzzr.com' ?
+        mixpanel.init("!{locals.mixpanel_token_prod}") :
+        mixpanel.init("!{locals.mixpanel_token_staging}");
+
+  body.home.page.page-id-99.page-parent.page-template.page-template-home.page-template-home-php.header-image.content-sidebar
+    img(src="https://api.movementventures.com/_uid.gif" width="0" height="0" style="display:none;visibility:hidden")
+    include ../includes/google-tag-manager.html
+    #wrap
+      .nav-bar
+        .wrap
+          .nav-bar-logo.logo.logo-white
+            p
+              a(href='/') Qzzr
+          ul#menu-main_menu.top_menu.nav.nav-bar-tabs
+            li#menu-item-11.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-11
+              a(href='tour') Tour
+            li#menu-item-572.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-has-children.menu-item-572
+              a(href='javascript:;') Uses
+              ul.sub-menu
+                li#menu-item-861.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-861
+                  a(href='#') Qzzr for:
+                li#menu-item-473.menu-item.menu-item-type-taxonomy.menu-item-object-uses.menu-item-473
+                  a(href='uses/publishers') Publishers
+                li#menu-item-474.menu-item.menu-item-type-taxonomy.menu-item-object-uses.menu-item-474
+                  a(href='uses/marketers') Marketers
+                li#menu-item-475.menu-item.menu-item-type-taxonomy.menu-item-object-uses.menu-item-475
+                  a(href='uses/agencies') Agencies
+                li#menu-item-977.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-977
+                  a(href='#') Qzzr to:
+                li#menu-item-476.menu-item.menu-item-type-taxonomy.menu-item-object-uses.menu-item-476
+                  a(href='/uses/drive-social-traffic') Drive social traffic
+                li#menu-item-477.menu-item.menu-item-type-taxonomy.menu-item-object-uses.menu-item-477
+                  a(href='uses/generate-qualified-leads') Generate qualified leads
+                li#menu-item-478.menu-item.menu-item-type-taxonomy.menu-item-object-uses.menu-item-478
+                  a(href='uses/present-targeted-offers') Present targeted offers
+            li#menu-item-430.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-430
+              a(href='pricing') Pricing
+            li#menu-item-431.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-431
+              a(href='stories/publishers') Stories
+            li#menu-item-432.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-has-children.menu-item-432
+              a(href='javascript:;') About
+              ul.sub-menu
+                li#menu-item-1287.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-1287
+                  a(href='our-team') Our team
+                li#menu-item-941.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-941
+                  a(href='press') Press
+                li#menu-item-669.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-669
+                  a(href='contact-us') Contact
+            li#menu-item-434.last-menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-434
+              a(href='blog/') Blog
+          .nav-bar-actions
+            .nav-bar-actions
+              #text-2.widget.widget_text
+                .widget-wrap
+                  .textwidget
+                    .nav-bar-actions
+                      nav.nav-bar-action
+                        a.button.button-primary.button-with-label.tooltip.tooltip-always.tooltip-primary.mr2(href='https://app.qzzr.com/account/signup', data-tooltip="It's free")
+                          i.icon.icon-ss-compose
+                          span.inline-block
+                            span.button-label
+                              | Create
+                              span.wl-none  a quiz
+                        a.button.button-white.button-outline(href='https://app.qzzr.com/account/signin')
+                          | Log in
+
+    block main
+
+
+    .nav-footer
+      .footer_top
+        .widget_nav_menu.box
+          h3 Overview
+          .menu-footer-overview-container
+            ul#menu-footer-overview.menu
+              li
+                a(href='tour') Tour
+              li
+                a(href='uses/publishers') Uses
+              li
+                a(href='pricing') Pricing
+              li
+                a(href='stories/publishers') Stories
+              li
+                a(href='our-team') About
+              li
+                a(href='blog/') Blog
+        #nav_menu-3.widget.widget_nav_menu.box
+          h3 Qzzr for
+          .menu-qzzr-for-container
+            ul#menu-qzzr-for.menu
+              li
+                a(href='uses/publishers') Publishers
+              li
+                a(href='uses/marketers') Marketers
+              li
+                a(href='uses/agencies') Agencies
+        #nav_menu-4.widget.widget_nav_menu.box
+          h3 Qzzr to
+          .menu-qzzr-to-container
+            ul#menu-qzzr-to.menu
+              li
+                a(href='/uses/drive-social-traffic') Drive social traffic
+              li
+                a(href='uses/generate-qualified-leads') Generate qualified leads
+              li
+                a(href='uses/present-targeted-offers') Present targeted offers
+        #nav_menu-5.widget.widget_nav_menu.box
+          h3 Useful Stuff
+          .menu-useful_stuff-container
+            ul#menu-useful_stuff.menu
+              li
+                a(href='commonly-asked-questions') Commonly asked questions
+              li
+                a(href='http://go.qzzr.com/ebook-are-you-a-qwizard/') Ebook: Are You a Qwizard?
+              li
+                a(href='blog/killer-techniques-behind-world-class-quizzes') Webinar: Killer Techniques of World-Class Quizzes
+              li
+                a(href='blog/video-create-outcome-quiz') How to create an outcome quiz
+              li
+                a(href='blog/video-create-graded-quiz') How to create a graded quiz
+              li
+                a(href='blog/make-quiz-like-buzzfeed') Create a quiz like BuzzFeed
+              li
+                a(href='blog/images-qzzr') Images & Qzzr
+        #nav_menu-6.widget.widget_nav_menu.box
+          h3 Need help?
+          .menu-need_help-container
+            ul#menu-need_help.menu
+              li
+                a(href='http://go.qzzr.com/request-your-demo/') Request a demo
+              li
+                a(href='http://go.qzzr.com/custom-quiz/') Custom quiz creation
+              li
+                a(href='http://go.qzzr.com/campaign-management/') Campaign management
+              li
+                a(href='/contact-us') Contact us
+      .footer_bottom
+        .down
+          .widget-area
+            #execphp-12.widget.widget_execphp
+              .execphpwidget
+                p.copyright Copyright 2015 Qzzr
+                ul
+                  li
+                    a(href='terms-of-service') Terms of service
+                  li
+                    a(href='privacy-policy') Privacy policy
+                  li
+                    a(href='content-guidelines') Content guidelines
+                  li
+                    a(href='sitemap') Sitemap
+        .social-media
+          .wrap
+            a.icon.icon-ss-social-facebook(href='https://www.facebook.com/pages/QZZR/200008303516674 ', target='_blank')
+            a.icon.icon-ss-social-twitter(href='https://twitter.com/Qzzr_', target='_blank')
+            a.icon.icon-ss-social-linkedin(href='https://www.linkedin.com/company/qzzr', target='_blank')
+
+    script(src='/main.min.js')
+
