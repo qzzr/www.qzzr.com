@@ -276,7 +276,7 @@ html:hover [class^="icon-ss"] {
 
 .icon-ss-compose:before,
 .icon-ss-compose.right:after {
-    content: ''
+    content: '📝'
 }
 
 .icon-ss-lock:before,
@@ -436,7 +436,7 @@ html:hover [class^="icon-ss"] {
 
 .icon-ss-megaphone:before,
 .icon-ss-megaphone.right:after {
-    content: ''
+    content: '📢'
 }
 
 .icon-ss-rss:before,
@@ -471,7 +471,7 @@ html:hover [class^="icon-ss"] {
 
 .icon-ss-users:before,
 .icon-ss-users.right:after {
-    content: ''
+    content: '👥'
 }
 
 .icon-ss-usergroup:before,
