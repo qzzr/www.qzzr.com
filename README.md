@@ -8,11 +8,10 @@ To install the dependencies:
 $ npm i
 ```
 
-Start the server:
-
-```
-$ make
-```
+Setup local environment
+#1 git checkout gh-pages
+#2  npm i -g serve
+#3 serve .
 
 To deploy to gh-pages
 
