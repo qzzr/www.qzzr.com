@@ -2,15 +2,6 @@
  * Module dependencies
  */
 
-import Color from 'core/color/color.js';
+var branding = require('branding/boombox');
 
-exports = module.exports = require('branding/boombox');
-
-// colors
-
-var color = exports.color
-
-for (var key in color)
-  color[key] = new Color(color[key]);
-
-export var color = color;
+module.exports = require('ui-kit/utils/root')(branding);
