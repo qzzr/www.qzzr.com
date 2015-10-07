@@ -9273,9 +9273,6 @@ select:focus {
   padding: 0;
 }
 
-// branding assets 
-
-
 .brand-guideline {
     margin-top: 8rem;
 }
@@ -9349,10 +9346,6 @@ select:focus {
     margin-bottom: 24px;
 }
 
-.brand-card-margin {
-    margin: 0 36px 0 0;
-}
-
 .brand-card-figure {
     display: flex; 
     align-items: center; 
@@ -9362,11 +9355,6 @@ select:focus {
 
 .brand-card-figure-image {
     margin-top: 4px;
-}
-
-.brand-card-figure-title {
-    text-align: center;
-    font-size: 3rem;  
 }
 
 .brand-card-title {
