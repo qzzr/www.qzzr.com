@@ -5609,6 +5609,13 @@ select:focus {
     line-height: 1.1em
 }
 
+.lhb {
+    line-height: 1.5;
+}
+
+.lhh {
+    line-height: 1.1;
+}
 .h-icon i {
     position: absolute;
     right: 100%;
@@ -9265,3 +9272,137 @@ select:focus {
 .no-pd {
   padding: 0;
 }
+
+// branding assets 
+
+
+.brand-guideline {
+    margin-top: 8rem;
+}
+
+.brand-guideline:before {
+    background: gray;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 108px;
+    opacity: .5;
+}
+
+.brand-type-example { 
+    color: #fff; 
+    line-height: 1;
+    padding-top: 0;
+    margin-bottom: 3rem;
+}
+
+.brand-mt16r {
+    margin-top 16rem 
+}
+    
+.brand-mb3r {
+    margin-left 0 
+    margin-bottom 2rem 
+}
+  
+.brand-examples {
+    max-width: 1164px;
+    text-align: left;
+}
+
+
+@media screen and (max-width: 671px) {
+    .brand-examples {
+        justify-content: center;
+    }
+}
+
+.brand-logo-example {
+    margin-top: 6rem; 
+}
+
+.brand-logo-example-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: -18px;
+    display: block;
+    float: left; 
+}    
+
+.brand-card {
+    display: flex; 
+    border-radius: 2px;
+    height: 184px;
+    padding: 1.6rem;
+}
+
+.bcm {
+    margin-right: 18px;
+    margin-left: -18px;
+}
+.brand-card-margin {
+    margin: 0 36px 0 0;
+}
+
+.brand-card-figure {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: auto;  
+}
+
+.brand-card-figure-image {
+    margin-top: 4px;
+}
+
+.brand-card-figure-title {
+    text-align: center;
+    font-size: 3rem;  
+}
+
+.brand-card-title {
+    display: block;
+    font-size: 16px;
+    line-height: 2;
+    margin-top: 9px;
+}
+   
+.brand-card-description {
+    color: gray;  
+    display: block;
+    font-size: 14px;
+} 
+
+.brand-card-link {
+    color: #fff;
+}
+
+.brand-card-link:hover {
+    cursor: pointer;
+    color: purple;
+}
+
+      
+.brand-card-dotted {
+    border: dashed 2px rgba(255,255,255,.5);
+}
+
+.brand-card-border {
+    border: solid 2px rgba(255,255,255,.5);
+}
+
+.brand-card-white {
+    background-color: #fff;
+} 
+
+.brand-card-purple {
+    background-color: #9559CE;
+}
+
+.brand-card-black {
+    background-color: #192129;
+} 
+
+.brand-card-midGray {
+    background-color: rgba(107, 120, 133, 0.5);
+}  
