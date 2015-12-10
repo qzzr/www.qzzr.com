@@ -5959,23 +5959,6 @@ select:focus {
     background-size: 48px 15px
 }
 
-.logo-boombox-tag {
-  display: block;
-  width: 96px;
-  height: 9px;
-  background-size: 96px 9px;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMEAAAASCAMAAADVNkovAAAApVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+4/eNVAAAANnRSTlMABujcCwLgAccP8EEczYUoF3AtFOTSspZ9Z0n47NZhJLygTjvBp4tsVzIg9Nmsj6+adFtStzZS/IJwAAADrUlEQVRIx81X17aiMBRNQpUOIlUUxQJiL/z/p00K4aK4nD5r8oCnkWTvU1TwG2vavC7EXa2e+gf9l7cXwF9fzdDyIkDbqi9/bvt/i4AvPd39pwimzftVv54exP8pguaTve/dWP8tAqg1CzvtyE+dEzi9QbBw2SfcGdKXFRoG7G83+pKUPoLRUxSEP3dJ+CdyMJ/SPjAWaDJBmzEzOiHRzg6rR/A4IHk6ifB5+h3J2qps9xhvfH9qxlILzRIQ2kciFpXDltmk05XPPT4CazNmHBQBktGpYIHpEbB1Sn8GgTLyXH9GpEreivQOBtFsmdxDjASbxsaqLgGpWucwUnUIJH1/Vojdyy4Y8SMPKJU74WjgZ5gZBM0+oSccw95NmCjqakRkd59AAJeCyzw5o6taPU2bm4kCm3N9Qmb5hYCvWieqKOssKlYxoTArmbbcQxKrQqauD61koCuxTwrG85rwB80Zi3JXCiXBJtvlcICAvE5moMDyPRZ06lmyJByWfQSlkDiuz7A5vuvowvWlisQi1MjB7pm/tsLcXQOuHYizSVqt6qSZSuwb3hlTo//SakmeyX4M9GwM3iAYafiR31pbeacexXQIzxOljyArSB4joDU+iMhxj/2wDx5ahQ8tuBqHmOuSa8uAxIq87zppVBO7zcPOMwz2xrXrguUit0kVDquoCjBfUs27WKwV6plZbKc+glQil1gDDWpgTYhRamU4iyJ8oOxwrcgBUL2uzbOv2IGUdpqL6cnmXKvUdsilSb9iO1ELRZI3wJc2YqMTJ80Q4BMCSkFkAV+TgWXR4gRDBIWJIzsE+h0jqLhmT34IwfYJgccQQFWOwDAHYSLR5qlFnoNUYZ6LBY4ueEIQm560RDuq7tBNmpvbNwgeGME96S5zxOTNuHZbf0DQdHcOY9KCL1W02IyF5RCBGBhUvJc8/M498lwWnxGAGDWkIlCTEWYaFIM3CFx8y9mpVSQyXxJVadX89gmBxVlERrdF16OXQAKe7w37YL4a0WS3eXfkgnss2Rr+duNX4fIQwQ7pAMBJS/smIIGrC9MuK+kTguzB9l2EgGxR9gYySMwRG0jDWXTLIc22UEIglsK28zhnOrp+6jsZ2tH0QnFk4Rwoj4DxMzbXmDxvYTrgEwJP2Io4LLhD2vWyhS9gHOmXoi3sWFHmcDhNLUZQdfCn/roabP2936ba0z8c4ey1lRBNNE2NYYvMNTXNdCH4iAAY4VRAk63EbOONL/uyRTgYZQVvkfAb0oBwP6vo8oMAAAAASUVORK5CYII=');
-  margin-top: 4px;
-  opacity: .7;
-  transition: none;
-  -moz-transition: none;
-  -webkit-transition: none;
-}
-
-.logo-boombox-tag:hover {
-    opacity: 1;
-}
-
 @media (max-width: 400px) {
     .logo-small {
         width: 40px;
@@ -6441,7 +6424,7 @@ select:focus {
 
 .nav-bar-logo {
     float: left;
-    margin: 24px 6px;
+    margin: 24px 8px;
     position: relative
     color: transparent;
     text-align: center;
