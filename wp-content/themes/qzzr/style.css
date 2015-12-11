@@ -6929,10 +6929,66 @@ select:focus {
     transform: translate(-50%, -50%)
 }
 
+.grid-pricing {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .box-pricing {
-    border: 2px solid #475461;
     text-align: left;
-    margin-bottom: 36px
+    width: 33.3333%;
+    float: left;
+    background: #E3E4EE;
+}
+
+@media screen and (max-width: 630px) {
+    .box-pricing {
+        width: 50%;
+    }
+    .box-pricing-primary {
+        width: 100%
+    }
+}
+
+.box-pricing .button {
+    height: 48px;
+    line-height: 44px;
+    width: 100%;
+}
+
+.box-pricing .tooltip{
+    margin: 2px 0 0 2px;
+}
+
+.box-pricing .tooltip:after {
+    white-space: normal;
+}
+.box-pricing .icon-ss-info {
+    font-size: 12px;
+}
+.box-pricing .tooltip:hover:after {
+    width: 200px;
+}
+
+.box-pricing:nth-child(even) {
+    background: #fff;
+}
+
+.box-pricing li {
+    font-size: 14px;
+    padding: 10px 18px;
+    line-height: 1.2em;
+}
+
+@media screen and (max-width: 750px) {
+    .box-pricing li {
+        font-size: 10px;
+    }
+}
+
+.box-pricing:nth-child(even) li:nth-child(even),
+.box-pricing:nth-child(odd) li:nth-child(odd) {
+    background: rgba(25,33,41,.05);
 }
 
 .box-pricing .box-header {
@@ -6972,7 +7028,7 @@ select:focus {
 }
 
 .box-pricing .box-body {
-    padding: 18px 18px 0 18px
+    padding: 0;
 }
 
 .box-pricing .box-footer {
@@ -6991,8 +7047,7 @@ select:focus {
 }
 
 .box-pricing-primary {
-    background: #52c291;
-    border-color: #52c291;
+    background: #52c291 !important;
     color: #fff
 }
 
@@ -9392,4 +9447,4 @@ select:focus {
 
 .brand-card-blueGray {
     background-color: #6B7885;
-} 
+}
