@@ -17,6 +17,7 @@
     "npm": "2.x.x"
   },
   "dependencies": {
+    "@movementventures/ui-kit": "^0.3.7",
     "ast2template": "^0.3.0",
     "ast2template-loader": "^0.2.0",
     "autoprefixer-loader": "^2.0.0",
@@ -42,7 +43,6 @@
     "json-loader": "^0.5.1",
     "jstransformer-marked": "0.0.2",
     "marked": "^0.3.3",
-    "movement-ui-kit": "git+https://github.com/movementventures/ui-kit.git#3a8b9558e4b97c91b153c42158bb33dcaf71ad3b",
     "onus": "^0.2.0",
     "onus-loader": "^0.2.0",
     "onus-style": "^0.2.0",

@@ -1,5 +1,5 @@
-import 'movement-ui-kit/blocks/index.js'
-import 'movement-ui-kit/blocks/assets/fonts'
+import '@movementventures/ui-kit/utils/bundle.js'
+import '@movementventures/ui-kit/assets/fonts'
 import 'branding/colfax/index.ess'
 
 import './modules/mixpanel'
