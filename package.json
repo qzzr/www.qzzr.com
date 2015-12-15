@@ -13,8 +13,8 @@
     "url": "https://github.com/movementventures/www.qzzr.com"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "2.x.x"
+    "node": "0.12.x",
+    "npm": "4.x.x"
   },
   "dependencies": {
     "@movementventures/ui-kit": "^0.3.7",
