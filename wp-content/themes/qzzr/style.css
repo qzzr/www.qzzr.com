@@ -4880,6 +4880,13 @@ input[type="file"] {
     z-index: 10
 }
 
+.button-long-label {
+    height: auto !important;
+    line-height: 18px !important;
+    min-height: 48px !important;
+    padding: 12px;
+}
+
 .field {
     position: relative
 }
