@@ -9455,3 +9455,64 @@ select:focus {
 .brand-card-blueGray {
     background-color: #6B7885;
 }
+
+.content-viewer {
+
+}
+
+.content-loader-container {
+    height: 606px;
+}
+
+.content-viewer-tabs { 
+    display: flex;
+    flex-direction: row;
+}
+
+.content-viewer-tab {
+    -webkit-transition: background-color 0.2s, -webkit-transform 0.2s;
+    align-items: center;
+    background: #eeeff8;
+    border-right: 2px solid rgba(107,120,133, 0.2);
+    border-top: 2px solid rgba(107,120,133, 0.2);
+    display: flex;
+    height: 108px;
+    justify-content: center;
+    transition:background-color 0.2s, transform 0.2s;
+    width: 25%;
+}
+
+.content-viewer-tab.is-active {
+    background: rgba(107,120,133, 0.5);
+}
+
+.content-viewer-tab a:active {
+    background: rgba(107,120,133, 1);
+}
+
+.content-viewer-tab:hover {
+    background: rgba(107,120,133, 0.5);
+}
+
+.content-view-tab:last-child {
+    border-right: none;
+}
+
+.content-viewer-tab:hover {
+    cursor: pointer;
+
+}
+
+.content-viewer-tab-title {
+    font-weight: bold;
+}
+
+.content-viewer-tab.is-active .content-viewer-tab-title {
+    color: #fff;
+}
+
+.content-viewer-cta-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
