@@ -5,7 +5,6 @@ $('.js-content-item').click(function(){
   $('body').find('#' + contentItem).toggleClass('is-active');
   $( '.js-content-loader').empty();
   $( '.js-content-loader').load('../static/quiz-examples/' + contentItem + '.html');
-  console.log(contentItem); 
 });
 $('iframe').click(function(){
   function resizeIframe(obj) {
