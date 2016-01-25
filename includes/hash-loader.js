@@ -5,7 +5,7 @@ $(function(){
     var hash = location.hash;
     console.log('location:' + location.hash);
 // Set the page title based on the hash.
-    document.title = 'The hash is ' + ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
+    document.title = ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
 // Iterate over all nav links, setting the "selected" class as-appropriate.
     $('#hash-loader a').each(function(){
       $(this)[$(this).attr('href') === hash ? 'addClass' : 'removeClass' ]( 'is-selected' );
