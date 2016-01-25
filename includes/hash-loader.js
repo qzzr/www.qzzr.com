@@ -9,6 +9,7 @@ $(function(){
 // Iterate over all nav links, setting the "selected" class as-appropriate.
     $('#hash-loader a').each(function(){
       $(this)[$(this).attr('href') === hash ? 'addClass' : 'removeClass' ]( 'is-selected' );
+      $(this)[$(this).attr('href') === hash ? 'addClass' : 'removeClass' ]( 'is-active' );
     });
   })  
 // Since the event is only triggered when the hash changes, we need to trigger

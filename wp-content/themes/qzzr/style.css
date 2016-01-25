@@ -9467,23 +9467,29 @@ select:focus {
 
 .content-viewer-tabs { 
     min-height: 255px;
-    display: flex;
-    flex-direction: row;
+    display: block;
 }
 
 .content-viewer-tab {
     -webkit-transition: background-color 0.2s, -webkit-transform 0.2s;
     align-items: center;
-    background: #eeeff8;
+    background-color: #343F4A;
     border: 2px solid gray);
     display: flex;
     justify-content: center;
     transition:background-color 0.2s, transform 0.2s;
-    width: 25%;
     color: #fff;
 }
 
+@media screen and (max-width: 1000px) {
+    .content-viewer-tab {
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+}
+
 .content-viewer-tab.is-active,
+.content-viewer-tab.is-selected,
 .content-viewer-tab:hover {
     background: rgba(149, 89, 206, 1);
     box-shadow: none;
@@ -9503,21 +9509,20 @@ select:focus {
 
 .content-viewer-cta-container {
     align-items: center;
+    align-self: center;
     display: flex;
     flex-direction: column;
-    align-self: center;
 }
 
 .card {
-    background: #EEEFF8;
     border-radius: 2px;
     display: block;
+    margin-left: 18px;
+    margin-right: 18px;
+    min-height: 239px;
     overflow: hidden;
     padding: 18px;
     position: relative;
-    margin-right: 18px;
-    margin-left: 18px;
-    width: 25%;
     position: relative;
 }
 
@@ -9529,10 +9534,10 @@ select:focus {
 }
 
 .card-image {
-    width: 125%;
-    top: -12.5%;
     left: -12.5%;
     position: absolute;
+    top: -12.5%;
+    width: 125%;
     z-index: 1;
 }
 
@@ -9542,29 +9547,17 @@ select:focus {
     opacity: .3;
 }
 
-.card-charcoal-overlay:before:hover {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: #343F4A;
-}
-
 .card-header,
 .card-subheader {
+    color: #fff;
     font-size: 18px;
     padding-bottom: 12px;
     z-index: 4;
-    color: #343F4A;
 }
 
 .card-body {
-    padding: 0;
     font-size: 18px;
+    padding: 0;
     z-index: 4;
 }
 
@@ -9577,7 +9570,7 @@ select:focus {
 }
 
 .card-border {
-    box-shadow: inset 0 0 0 2px rgba(107, 120, 133, 0.5);
+    box-shadow: inset 0 0 0 2px #343F4A;
 }
 
 .card-header,
