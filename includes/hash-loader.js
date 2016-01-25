@@ -1,21 +1,28 @@
+
+$('.js-content-loader').load('../static/quiz-examples/quiz-154047.html');
+
 $(function(){
-// Bind an event to window.onhashchange that, when the hash changes, gets the
-// hash and adds the class "selected" to any matching nav link.
   $(window).hashchange(function(){
     var hash = location.hash;
-    console.log('location:' + location.hash);
-// Set the page title based on the hash.
-    document.title = ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
-// Iterate over all nav links, setting the "selected" class as-appropriate.
+    document.title = ('quizzes');
     $('#hash-loader a').each(function(){
       $(this)[$(this).attr('href') === hash ? 'addClass' : 'removeClass' ]( 'is-selected' );
-      $(this)[$(this).attr('href') === hash ? 'addClass' : 'removeClass' ]( 'is-active' );
     });
-  })  
-// Since the event is only triggered when the hash changes, we need to trigger
-// the event now, to handle the hash the page may have loaded with.
+
+    updateContent(hash.replace('#',''));
+
+  });
   $(window).hashchange(); 
 });
+
+function updateContent(contentItem) {
+  if (contentItem === '') 
+    contentItem = 'quiz-154047';
+  $('.js-content-item').removeClass('is-active');
+  $('body').find('.' + contentItem).toggleClass('is-active');
+  $( '.js-content-loader').empty();
+  $( '.js-content-loader').load('../static/quiz-examples/' + contentItem + '.html');
+}
 
 /*
  * jQuery hashchange event - v1.3 - 7/21/2010
