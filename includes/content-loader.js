@@ -1,4 +1,4 @@
-$('.js-content-loader').load('../static/quiz-examples/quiz-1.html');
+$('.js-content-loader').load('../static/quiz-examples/quiz-154047.html');
 $('.js-content-item').click(function(){
   var contentItem = $(this).data("content");
   $('.js-content-item').removeClass('is-active');
