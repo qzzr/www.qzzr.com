@@ -4,7 +4,6 @@ $('.js-content-loader').load('../static/quiz-examples/quiz-154047.html');
 $(function(){
   $(window).hashchange(function(){
     var hash = location.hash;
-    document.title = ('quizzes');
     $('#hash-loader a').each(function(){
       $(this)[$(this).attr('href') === hash ? 'addClass' : 'removeClass' ]( 'is-selected' );
     });
