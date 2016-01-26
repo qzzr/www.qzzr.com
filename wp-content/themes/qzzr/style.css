@@ -9459,6 +9459,7 @@ select:focus {
 .content-viewer-container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 24px;
 }
 
 .content-loader-container {
@@ -9534,10 +9535,13 @@ select:focus {
 }
 
 .card-image {
-    left: -12.5%;
+    background-size: cover;
+    background-position: center;
+    bottom: 0;
+    left: 0;
     position: absolute;
-    top: -12.5%;
-    width: 125%;
+    right: 0;
+    top: 0;
     z-index: 1;
 }
 
