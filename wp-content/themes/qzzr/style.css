@@ -9487,7 +9487,20 @@ select:focus {
         margin-top: 18px;
         margin-bottom: 18px;
     }
+
+    .content-viewer-cta-container .h2 {
+        font-size: 36px; 
+    }
 }
+
+@media screen and (max-width: 850px) {
+    .content-viewer-container {
+        flex-direction: column-reverse;
+        width: 100%; 
+    }
+}
+
+
 
 .content-viewer-tab.is-active,
 .content-viewer-tab.is-selected,
