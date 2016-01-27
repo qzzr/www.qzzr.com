@@ -9463,7 +9463,7 @@ select:focus {
 }
 
 .content-loader-container {
-    height: 606px;
+    min-height: 606px;
 }
 
 .content-viewer-tabs { 
