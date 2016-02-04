@@ -1,4 +1,3 @@
-
 $('.js-content-loader').load('../static/quiz-examples/quiz-154047.html');
 
 $(function(){
